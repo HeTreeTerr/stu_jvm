@@ -20,10 +20,18 @@ public class StuArrayList {
         Student s1 = new Student("张三",15);
         Student s2 = new Student("李四",23);
         Student s3 = new Student("王五",19);
-
-        arrayList.add(s1);
+        //默认大小为10，每次扩容1.5倍
+        for (int i = 0; i < 10; i++) {
+            arrayList.add(s1);
+        }
+        //第一次扩容
         arrayList.add(s2);
+        for (int i = 0; i < 4; i++) {
+            arrayList.add(s2);
+        }
+        //第二次扩容
         arrayList.add(s3);
+
         //2.删除元素
         //arrayList.remove(new Student("张三",15));
         System.out.println("元素个数：" + arrayList.size());
