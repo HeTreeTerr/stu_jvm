@@ -2,10 +2,7 @@ package com.hss.collection;
 
 import com.hss.bean.Student;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 /**
  * ArrayList的使用
@@ -55,5 +52,8 @@ public class StuArrayList {
         System.out.println("是否包含张三："+arrayList.contains(new Student("张三",15)));
         System.out.println("是否为空："+arrayList.isEmpty());
 
+        //让ArrayList线程安全的方法
+        List<String> synList = Collections.synchronizedList(new ArrayList<String>());
+        synList.add("123");
     }
 }
