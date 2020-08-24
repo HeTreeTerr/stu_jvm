@@ -48,6 +48,15 @@ public class Person {
     public int hashCode() {
 
         return Objects.hash(name, age);
+        //(1) 31是一个质数减少散列冲突  （2）31提高执行效率  31*i=(i<<5)-i
+        /*final int prime = 31;
+
+        int result = 1;
+        result = prime * result +age;
+        result = prime * result + (name == null ? 0 : name.hashCode());
+
+        return result;*/
+
     }
 
     @Override
