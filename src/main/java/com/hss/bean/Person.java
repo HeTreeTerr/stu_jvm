@@ -4,8 +4,9 @@ import java.util.Objects;
 
 /**
  * 人类实体
+ * TreeSet:implements Comparable<Person>
  */
-public class Person {
+public class Person{
 
     private String name;
 
@@ -66,4 +67,12 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
+
+    //先按姓名比，然后再按年龄比
+   /*@Override
+    public int compareTo(Person o) {
+        int n1 = this.getName().compareTo(o.getName());
+        int n2 = this.getAge() - o.getAge();
+        return n1!=0? n1:n2;
+    }*/
 }
