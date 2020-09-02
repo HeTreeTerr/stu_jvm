@@ -1,4 +1,4 @@
-package com.hss.collection;
+package com.hss.collection.set;
 
 import java.util.Comparator;
 import java.util.TreeSet;
