@@ -1,6 +1,7 @@
 package com.hss.collection.map;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 /**
@@ -42,6 +43,25 @@ public class StuHashMapStringParam {
         hashMap.put("z","z");
 
         //2.遍历
+        for(String str : hashMap.keySet()){
+            System.out.println(str+"----"+hashMap.get(str));
+            //不能这样删，会报错：并发修改异常
+            /*if("x".equals(str)){
+                hashMap.remove(str);
+            }*/
+        }
+
+        //2.正确删除方式
+        Iterator<String> iterator = hashMap.keySet().iterator();
+        while (iterator.hasNext()){
+            String str = iterator.next();
+            System.out.println(str);
+            if("x".equals(str)){
+                iterator.remove();
+            }
+        }
+
+        System.out.println("-----------------操作后的结果：----------------");
         for(String str : hashMap.keySet()){
             System.out.println(str+"----"+hashMap.get(str));
         }

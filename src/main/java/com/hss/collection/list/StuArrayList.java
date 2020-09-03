@@ -3,6 +3,7 @@ package com.hss.collection.list;
 import com.hss.bean.Student;
 
 import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * ArrayList的使用
@@ -52,8 +53,13 @@ public class StuArrayList {
         System.out.println("是否包含张三："+arrayList.contains(new Student("张三",15)));
         System.out.println("是否为空："+arrayList.isEmpty());
 
-        //让ArrayList线程安全的方法
+        //1.让ArrayList线程安全的方法
         List<String> synList = Collections.synchronizedList(new ArrayList<String>());
         synList.add("123");
+
+        //2.CopyOnWriteArrayList(不完全线程安全，写安全(锁定对象，复制一份数组进行操作)，读不安全)
+        CopyOnWriteArrayList<String> writeArrayList = new CopyOnWriteArrayList<String>();
+        writeArrayList.add("4396");
+        writeArrayList.add("4399");
     }
 }
