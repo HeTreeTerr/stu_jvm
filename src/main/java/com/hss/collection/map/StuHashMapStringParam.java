@@ -27,6 +27,7 @@ public class StuHashMapStringParam {
         hashMap.put("j","j");
         hashMap.put("k","k");
         hashMap.put("l","l");
+        // 12 大于size*阈值，触发扩容
         hashMap.put("m","m");
         hashMap.put("n","n");
         hashMap.put("o","o");
