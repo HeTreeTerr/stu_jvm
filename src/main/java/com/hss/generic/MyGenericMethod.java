@@ -8,7 +8,7 @@ public class MyGenericMethod {
 
     //泛型方法
     public <T> T show(T t){
-        System.out.println("泛型放法");
+        System.out.println("泛型方法");
         return t;
     }
 }
