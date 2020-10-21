@@ -15,6 +15,7 @@ public class StuWait {
             System.out.println(Thread.currentThread().getName() + "正在start...");
             thread1.start();
             System.out.println(Thread.currentThread().getName() + "正在wait...");
+            //thread1.wait(3000);
             thread1.wait();
             System.out.println(Thread.currentThread().getName() + "跳出wait...");
         }
@@ -30,7 +31,7 @@ class WaitThread1 implements Runnable{
     public void run() {
         synchronized (this) {
             try {
-                Thread.sleep(1000); //  使当前线阻塞 1 s，确保主程序的 t1.wait(); 执行之后再执行 notify()
+                Thread.sleep(5000); //  使当前线阻塞 1 s，确保主程序的 t1.wait(); 执行之后再执行 notify()
             } catch (Exception e) {
                 e.printStackTrace();
             }
