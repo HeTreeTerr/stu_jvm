@@ -13,7 +13,7 @@ import java.util.Arrays;
  * 编译成class文件，并放入java运行环境中
  */
 public class DynamicClass {
-
+    //创建弱引用对象
     private static WeakReference<DynamicClass> mWeakReference = new WeakReference<>(new DynamicClass());
 
     public static void main(String[] args) {
@@ -21,34 +21,36 @@ public class DynamicClass {
     }
 
     public static Object eval() {
+        //获取弱引用对象
         DynamicClass eval = mWeakReference.get();
-
-        String method = "main";
-
-        String codes = "public static void main(String[]args){" +
-                "System.out.print(\"hello world\"); }";
-
+        //方法名称
+        String method = "handsomeGuy";
+        //方法片段代码
+        String codes = "public void handsomeGuy(String name){" +
+                "System.out.print(\"帅哥---->:\" + name); }";
         eval.run(method,codes);
         return null;
     }
 
     private Object run(String method,String codes){
-
+        //定义类的className
         String className = "com.test.Eval";
+        //拼接Eval中的文本内容
         StringBuilder sb = new StringBuilder();
         sb.append("package com.test;");
         sb.append("\n public class Eval{\n ");
         sb.append(codes);
         sb.append("\n}");
-
+        //核心（由类名和片段生成class文件）
         Class<?> clazz = compile(className, sb.toString());
         try {
-            // 生成对象
+            // 获取类示例
             Object obj = clazz.newInstance();
             Class<? extends Object> cls = obj.getClass();
-            // 调用sayHello方法
-            Method m = clazz.getMethod(method,String[].class);
-            Object invoke = m.invoke(obj, new Object[] { new String[] {} });
+            // 获取方法
+            Method m = clazz.getMethod(method,String.class);
+            //执行方法并返回
+            Object invoke = m.invoke(obj, new Object[] { "hss" });
             return invoke;
         } catch (Exception e) {
             e.printStackTrace();
@@ -64,7 +66,7 @@ public class DynamicClass {
      */
     private  Class<?> compile(String className, String javaCodes) {
         JavaCompiler compiler = ToolProvider.getSystemJavaCompiler();
-        StandardJavaFileManager fileManager = compiler.getStandardFileManager(null,                 null, null);
+        StandardJavaFileManager fileManager = compiler.getStandardFileManager(null,null, null);
         StrSrcJavaObject srcObject = new StrSrcJavaObject(className, javaCodes);
         Iterable<? extends JavaFileObject> fileObjects = Arrays.asList(srcObject);
         String flag = "-d";
