@@ -4,6 +4,7 @@ import org.junit.Test;
 import sun.reflect.generics.tree.Tree;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @Author hss
@@ -17,6 +18,8 @@ public class Exam2 {
 
     private final int k = 2;
 
+    private final List<Object> list = new ArrayList<Object>();
+
     @Test
     public void test1(){
         System.out.println(Exam2.j);
@@ -24,8 +27,17 @@ public class Exam2 {
         Exam2.j = 4;
 
         System.out.println(Exam2.j);
+        //报错，final修饰的变量不可变
+        //k = 2;
+
+        list.add(1);
     }
 
+    /**
+     * 1.无下标
+     * 2.不允许重复
+     * 3.无序（指不保证先进先出）
+     */
     @Test
     public void test2() {
         System.out.println("---------------- 默认 排序结果-----------------");
@@ -42,11 +54,10 @@ public class Exam2 {
         treeMap.put("cc","cc");
         treeMap.put("bb","bb");
         treeMap.put("dd","dd");
-        Set<String> keySet = treeMap.keySet();
-        Iterator<String> iterator = keySet.iterator();
+        Iterator<Map.Entry<String, Object>> iterator = treeMap.entrySet().iterator();
         while (iterator.hasNext()){
-            String key = iterator.next();
-            System.out.println("key:"+key+"-------------value:"+treeMap.get(key));
+            Map.Entry<String, Object> next = iterator.next();
+            System.out.println("key:"+next.getKey()+"-------------value:"+next.getValue());
         }
     }
 
@@ -69,5 +80,26 @@ public class Exam2 {
             Map.Entry<Integer, Object> next = iterator.next();
             System.out.println("key:"+next.getKey()+"------------value:"+next.getValue());
         }
+    }
+
+    @Test
+    public void test3(){
+        ConcurrentHashMap<String, Object> concurrentHashMap = new ConcurrentHashMap<>();
+        //存值
+        concurrentHashMap.put("111","111");
+        concurrentHashMap.put("222","222");
+        concurrentHashMap.put("333","333");
+        //获取值
+        System.out.println(concurrentHashMap.get("333"));
+        //遍历
+        Iterator<Map.Entry<String, Object>> iterator = concurrentHashMap.entrySet().iterator();
+        while (iterator.hasNext()){
+            Map.Entry<String, Object> entry = iterator.next();
+            System.out.println("key:"+entry.getKey()+"------------------value:"+entry.getValue());
+        }
+        //判断
+        System.out.println(concurrentHashMap.isEmpty());
+        //System.out.println(concurrentHashMap.);
+        System.out.println(concurrentHashMap.remove("333"));
     }
 }
