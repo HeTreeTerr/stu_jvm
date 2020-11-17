@@ -37,4 +37,8 @@ public class Worker {
                 ", idCard=" + idCard +
                 '}';
     }
+
+    public void finalize() throws Throwable {
+        System.out.println("终结器引用");
+    }
 }

@@ -9,7 +9,9 @@ import java.util.Map;
 public class StuThreadLocal {
 
     public static void main(String[] args) {
-        new Thread(new Thread1(),"t1").start();
+        //启动线程1
+        //new Thread(new Thread1(),"t1").start();
+        //启动线程2
         new Thread(new Thread2(),"t2").start();
     }
 
