@@ -1,4 +1,4 @@
-package com.hss.demo;
+package com.hss.demo1;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonProcessingException;

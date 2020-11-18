@@ -1,4 +1,4 @@
-package com.hss.demo;
+package com.hss.demo1;
 
 /**
  * 演示 cpu 占用过高

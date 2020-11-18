@@ -1,6 +1,6 @@
 package com.hss.thread;
 
-import com.hss.demo.Demo1_2;
+import com.hss.demo1.Demo1_2;
 
 public class Thread2 extends Thread {
 

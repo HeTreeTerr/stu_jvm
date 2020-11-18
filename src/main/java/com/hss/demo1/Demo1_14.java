@@ -1,4 +1,4 @@
-package com.hss.demo;
+package com.hss.demo1;
 
 /**
  * 演示字符串自变量也是[延迟]成为对象的

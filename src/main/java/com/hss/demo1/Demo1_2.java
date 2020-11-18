@@ -1,4 +1,4 @@
-package com.hss.demo;
+package com.hss.demo1;
 
 import com.hss.thread.Thread1;
 import com.hss.thread.Thread2;
