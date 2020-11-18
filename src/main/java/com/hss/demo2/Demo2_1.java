@@ -1,11 +1,15 @@
-package com.hss.demo;
+package com.hss.demo2;
 
 import com.hss.bean.Worker;
 
 import java.io.IOException;
 
-public class Demo1_26 {
-
+public class Demo2_1 {
+    /**
+     * 终结器引用
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         Worker worker = new Worker();
         System.out.println("创建对象..");
