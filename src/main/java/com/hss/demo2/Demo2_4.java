@@ -19,9 +19,31 @@ public class Demo2_4 {
 
     public static void main(String[] args) {
         List<byte[]> list = new ArrayList<>();
-        list.add(new byte[_7MB]);
-        list.add(new byte[_512KB]);
-        list.add(new byte[_512KB]);
+        //执行一次gc
+        //list.add(new byte[_7MB]);
+        //执行两次gc
+        //list.add(new byte[_512KB]);
+        //数据晋升到老年代
+        //list.add(new byte[_512KB]);
+
+
+        //当要创建一个非常大的对象时（比伊甸园和to、from区域都大），直接晋升到老年代
+        //list.add(new byte[_8MB]);
+        //当要创建的对象太大，经过垃圾回收，老年代的空间还是不够时，直接报堆内存溢出
+        //list.add(new byte[_8MB]);
+
+        //其他线程的堆内存溢出不会导致主线程异常结束
+        new Thread(){
+          public void run(){
+              list.add(new byte[_8MB]);
+              list.add(new byte[_8MB]);
+          }
+        }.start();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     /**
