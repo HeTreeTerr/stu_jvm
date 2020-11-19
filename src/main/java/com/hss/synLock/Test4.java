@@ -1,5 +1,8 @@
 package com.hss.synLock;
 
+/**
+ * synchronized的锁消除
+ */
 public class Test4 {
 
     public void method1(){
