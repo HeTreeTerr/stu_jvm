@@ -38,7 +38,7 @@ public class Worker {
                 '}';
     }
 
-    public void finalize() throws Throwable {
+    /*public void finalize() throws Throwable {
         System.out.println("终结器引用");
-    }
+    }*/
 }
