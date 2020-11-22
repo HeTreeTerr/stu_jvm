@@ -1,7 +1,5 @@
 package com.hss.volatileStu;
 
-import com.hss.util.ThreadLocalUtil;
-
 public class StuVolatile {
     /**
      * 当计算机存在多个cpu时：
@@ -32,7 +30,7 @@ public class StuVolatile {
             //如果flag为false
             while (!flag){
                 //线程礼让
-                Thread.yield();
+                //Thread.yield();
             }
             System.out.println("----------->"+number);
         }
