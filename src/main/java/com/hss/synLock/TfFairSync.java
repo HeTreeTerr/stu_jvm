@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 公平锁，最大程度保证等待
+ */
 public class TfFairSync {
     //true表示公平锁  false表示非公平锁
     private ReentrantLock lock = new ReentrantLock(true);

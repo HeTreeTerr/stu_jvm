@@ -29,7 +29,7 @@ public class StuVolatile {
         public void run() {
             //如果flag为false
             while (!flag){
-                //线程礼让
+                //线程礼让，导致程序正常执行
                 //Thread.yield();
             }
             System.out.println("----------->"+number);
