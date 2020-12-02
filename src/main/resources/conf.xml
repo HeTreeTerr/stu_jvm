@@ -2,6 +2,14 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+
+    <settings>
+        <!--驼峰标识-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 对于批量更新操作缓存SQL以提高性能 -->
+        <setting name="defaultExecutorType" value="SIMPLE" />
+    </settings>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC" />
