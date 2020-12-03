@@ -35,7 +35,9 @@ public class TestMybatisProxy {
         map.put("id",1);
         map.put("sidx","id");
         map.put("sord","desc");
-        User user = userMapper.findUserOrderBy(map);
+        userMapper.getUserById(1);
+        //session.clearCache();
+        User user = userMapper.getUserById(1);
         System.out.println(user);
     }
 }
