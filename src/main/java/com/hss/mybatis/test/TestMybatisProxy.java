@@ -35,9 +35,16 @@ public class TestMybatisProxy {
         map.put("id",1);
         map.put("sidx","id");
         map.put("sord","desc");
-        userMapper.getUserById(1);
+        //清理缓存
         //session.clearCache();
         User user = userMapper.getUserById(1);
+        userMapper.getUserById(1);
         System.out.println(user);
+        //手动提交
+        session.commit();
+
+        UserMapper userMapper1 = session.getMapper(UserMapper.class);
+        User user1 = userMapper1.getUserById(1);
+        System.out.println(user1);
     }
 }
