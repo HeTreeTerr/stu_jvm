@@ -10,6 +10,8 @@ import org.mybatis.generator.api.MyBatisGenerator;
 
 import java.io.IOException;
 import java.io.Reader;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Mybatis
@@ -28,7 +30,12 @@ public class TestMybatisProxy {
         SqlSession session = sessionFactory.openSession();
         //执行查询返回一个唯一 user 对象的 sql
         UserMapper userMapper = session.getMapper(UserMapper.class);
-        User user = userMapper.getUserById(1);
+
+        Map<String,Object> map = new HashMap<String,Object>();
+        map.put("id",1);
+        map.put("sidx","id");
+        map.put("sord","desc");
+        User user = userMapper.findUserOrderBy(map);
         System.out.println(user);
     }
 }

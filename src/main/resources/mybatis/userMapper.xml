@@ -6,4 +6,8 @@
     <select id="getUserById" parameterType="int" resultType="com.hss.mybatis.pojo.User">
         select * from users where id=${id}
     </select>
+
+    <select id="findUserOrderBy" parameterType="java.util.Map" resultType="com.hss.mybatis.pojo.User">
+        select * from users where id=#{id} order by ${sidx} ${sord}
+    </select>
 </mapper>
