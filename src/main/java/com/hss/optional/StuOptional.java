@@ -47,7 +47,12 @@ public class StuOptional {
         flatMap(Function<? super T, Optional<U>> mapper)
          */
 
+        //stuOptional.testMap();
     }
+
+    /*private void testMap(){
+        Optional.ofNullable(user).map(()-> )
+    }*/
 
     /**
      * 当user为空时，抛出异常
@@ -57,7 +62,7 @@ public class StuOptional {
         user.setId(2);
         user.setAge(16);
         user.setName("李二狗");*/
-        User user = Optional.ofNullable(StuOptional.user)
+        user = Optional.ofNullable(user)
                 .orElseThrow(() -> new RuntimeException("运行时异常！"));
         System.out.println(user);
     }
