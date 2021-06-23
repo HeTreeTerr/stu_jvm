@@ -38,9 +38,34 @@ public class StuOptional {
 
 //        stuOptional.testOrElse();
 
-        stuOptional.testOrElseGet();
+//        stuOptional.testOrElseGet();
+
+//        stuOptional.testOrElseThrow();
+
+        /*
+        map(Function<? super T, ? extends U> mapper)
+        flatMap(Function<? super T, Optional<U>> mapper)
+         */
+
     }
 
+    /**
+     * 当user为空时，抛出异常
+     */
+    private void testOrElseThrow(){
+        /*user = new User();
+        user.setId(2);
+        user.setAge(16);
+        user.setName("李二狗");*/
+        User user = Optional.ofNullable(StuOptional.user)
+                .orElseThrow(() -> new RuntimeException("运行时异常！"));
+        System.out.println(user);
+    }
+
+    /**
+     * 当user为空时，调用createUser()
+     * 当user不为空时，不调用createUser()
+     */
     private void testOrElseGet(){
         /*user = new User();
         user.setId(2);
@@ -55,10 +80,10 @@ public class StuOptional {
      * 当user不为空时，同样调用createUser()
      */
     private void testOrElse(){
-        user = new User();
+        /*user = new User();
         user.setId(2);
         user.setAge(16);
-        user.setName("李二狗");
+        user.setName("李二狗");*/
 
         user = Optional.ofNullable(user).orElse(createUser());
         System.out.println(user);
