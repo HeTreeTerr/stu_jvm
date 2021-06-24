@@ -59,6 +59,27 @@ public class StuOptional {
 //        stuOptional.testIsPresent();
 
 //        stuOptional.testIfPresent();
+
+        /**
+         * filter(Predicate<? super T> predicate)
+         */
+
+        stuOptional.testFilter();
+    }
+
+    /**
+     * 根据一定的条件来筛选
+     */
+    private void testFilter(){
+        user = new User();
+        user.setId(2);
+        user.setAge(7);
+        user.setName("李二狗");
+        Optional<User> userOpt = Optional.ofNullable(StuOptional.user)
+                .filter(u -> {
+            return StuOptional.user.getAge() > 6;
+        });
+        System.out.println(userOpt.isPresent());
     }
 
     /**
