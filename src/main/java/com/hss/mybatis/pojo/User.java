@@ -1,6 +1,7 @@
 package com.hss.mybatis.pojo;
 
 import java.io.Serializable;
+import java.util.Optional;
 
 /**
  * 用户实体类
@@ -32,6 +33,10 @@ public class User implements Serializable {
 
     public String getName() {
         return name;
+    }
+
+    public Optional<String> getOptName(){
+        return Optional.ofNullable(name);
     }
 
     public void setName(String name) {

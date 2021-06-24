@@ -47,12 +47,40 @@ public class StuOptional {
         flatMap(Function<? super T, Optional<U>> mapper)
          */
 
-        //stuOptional.testMap();
+//        stuOptional.testMap();
+
+//        stuOptional.testFlatMap();
     }
 
-    /*private void testMap(){
-        Optional.ofNullable(user).map(()-> )
-    }*/
+    /**
+     * user==null || user.name==null
+     *  java.util.NoSuchElementException: No value present
+     * user.name != null
+     *  获得 user.name的值
+     */
+    private void testFlatMap(){
+        user = new User();
+        /*user.setId(2);
+        user.setAge(16);
+        user.setName("李二狗");*/
+        String name = Optional.ofNullable(user).flatMap(u -> u.getOptName()).get();
+        System.out.println(name);
+    }
+
+    /**
+     * user==null || user.name==null
+     *  java.util.NoSuchElementException: No value present
+     * user.name != null
+     *  获得 user.name的值
+     */
+    private void testMap(){
+        /*user = new User();
+        user.setId(2);
+        user.setAge(16);
+        user.setName("李二狗");*/
+        String name = Optional.ofNullable(user).map(u -> u.getName()).get();
+        System.out.println(name);
+    }
 
     /**
      * 当user为空时，抛出异常
