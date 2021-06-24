@@ -50,17 +50,47 @@ public class StuOptional {
 //        stuOptional.testMap();
 
 //        stuOptional.testFlatMap();
+
+        /*
+        isPresent()
+        ifPresent(Consumer<? super T> consumer)
+         */
+
+//        stuOptional.testIsPresent();
+
+//        stuOptional.testIfPresent();
     }
 
     /**
+     * 判断对象是否为空
+     *  如果存在，执行一些方法
+     */
+    private void testIfPresent(){
+//        User user = new User();
+        Optional.ofNullable(user).ifPresent(user1 -> {
+            System.out.println("do someThing!");
+        });
+    }
+
+    /**
+     * 判断对象是否为空
+     */
+    private void testIsPresent(){
+//        User user = new User();
+        boolean present = Optional.ofNullable(user).isPresent();
+        System.out.println(present);
+    }
+
+    /**
+     * 获取实体Optional<T>类型的方法的属性值
      * user==null || user.name==null
      *  java.util.NoSuchElementException: No value present
      * user.name != null
      *  获得 user.name的值
      */
     private void testFlatMap(){
-        user = new User();
-        /*user.setId(2);
+        /*user = new User();
+        user.setId(2);
         user.setAge(16);
         user.setName("李二狗");*/
         String name = Optional.ofNullable(user).flatMap(u -> u.getOptName()).get();
@@ -68,6 +98,7 @@ public class StuOptional {
     }
 
     /**
+     * 获取实体方法中的属性值
      * user==null || user.name==null
      *  java.util.NoSuchElementException: No value present
      * user.name != null
