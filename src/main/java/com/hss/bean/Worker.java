@@ -6,6 +6,8 @@ public class Worker {
 
     private Integer idCard;
 
+    private Address address;
+
     public Worker() {
     }
 
@@ -28,6 +30,14 @@ public class Worker {
 
     public void setIdCard(Integer idCard) {
         this.idCard = idCard;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     @Override
