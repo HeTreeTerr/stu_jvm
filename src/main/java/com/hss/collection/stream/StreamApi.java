@@ -110,15 +110,6 @@ public class StreamApi {
          *          min-返回流中最小值
          */
 
-        //从stream流中获取新的list结果集
-        System.out.println("-----------------------");
-        List<Integer> ages = emps.stream()
-                .map(e -> e.getAge())
-                .collect(Collectors.toList());
-
-        ages.stream()
-                .forEach(System.out::println);
-
         //检查是否匹配所有元素
         System.out.println("-----------------------");
         boolean allMatch = emps.stream()
@@ -166,5 +157,20 @@ public class StreamApi {
         Optional<Emp> min = emps.stream()
                 .min((e1, e2) -> Integer.compare(e1.getAge(), e2.getAge()));
         System.out.println(min.get());
+
+        //从stream流中获取新的list结果集
+        System.out.println("-----------------------");
+        List<Integer> ages = emps.stream()
+                .map(e -> e.getAge())
+                .collect(Collectors.toList());
+
+        ages.stream()
+                .forEach(System.out::println);
+
+        //可以将流中元素反复结合起来，得到一个值
+        Optional<Integer> reduce = emps.stream()
+                .map(e -> e.getAge())
+                .reduce(Integer::sum);
+        System.out.println(reduce.get());
     }
 }
