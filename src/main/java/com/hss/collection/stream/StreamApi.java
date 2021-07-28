@@ -15,7 +15,9 @@ public class StreamApi {
 
 //        streamApi.appendStream();
 
-        streamApi.endStream();
+//        streamApi.endStream();
+
+        streamApi.parallelAndsequential();
     }
 
     //创建
@@ -172,5 +174,28 @@ public class StreamApi {
                 .map(e -> e.getAge())
                 .reduce(Integer::sum);
         System.out.println(reduce.get());
+    }
+
+    public void parallelAndsequential(){
+//        定义列表
+        List<Integer> asList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9);
+//        串行流（默认）
+        System.out.println("---------串行流--------");
+        asList.stream()
+                .forEach(System.out::println);
+//        并行流
+        System.out.println("---------并行流--------");
+        asList.parallelStream()
+                .forEach(System.out::println);
+//        串行转并行
+        System.out.println("---------串行转并行--------");
+        asList.stream()
+                .parallel()
+                .forEach(System.out::println);
+//        并行转串行
+        System.out.println("---------并行转串行--------");
+        asList.parallelStream()
+                .sequential()
+                .forEach(System.out::println);
     }
 }
