@@ -18,6 +18,9 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * 生成二维码
+ */
 public class QRcodeGeneration {
 
     @Test

@@ -1,4 +1,4 @@
-package com.hss;
+package com.hss.stringTest;
 
 public class TestKey {
 
