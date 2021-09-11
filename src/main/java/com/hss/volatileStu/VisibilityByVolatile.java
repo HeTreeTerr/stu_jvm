@@ -1,6 +1,9 @@
 package com.hss.volatileStu;
 
-public class StuVolatile {
+/**
+ * volatile关键字，可见性
+ */
+public class VisibilityByVolatile {
     /**
      * 当计算机存在多个cpu时：
      * volatile关键字注解变量后，
@@ -29,8 +32,7 @@ public class StuVolatile {
         public void run() {
             //如果flag为false
             while (!flag){
-                //线程礼让，导致程序正常执行
-                //Thread.yield();
+
             }
             System.out.println("----------->"+number);
         }
