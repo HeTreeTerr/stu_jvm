@@ -1,8 +1,6 @@
-package com.hss.collection.map;
+package com.hss.map;
 
 import java.util.Hashtable;
-import java.util.Map;
-import java.util.Set;
 
 /**
  * 底层结构：数组+链表

@@ -1,11 +1,9 @@
-package com.hss.collection.map;
+package com.hss.map;
 
 import com.hss.bean.Person;
-import com.hss.bean.Worker;
 
 import java.util.Comparator;
 import java.util.Map;
-import java.util.Set;
 import java.util.TreeMap;
 
 /**

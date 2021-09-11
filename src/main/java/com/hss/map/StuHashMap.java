@@ -1,4 +1,4 @@
-package com.hss.collection.map;
+package com.hss.map;
 
 import com.hss.bean.Worker;
 

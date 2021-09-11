@@ -1,4 +1,4 @@
-package com.hss.collection.map;
+package com.hss.map;
 
 import java.util.Iterator;
 import java.util.Map;
