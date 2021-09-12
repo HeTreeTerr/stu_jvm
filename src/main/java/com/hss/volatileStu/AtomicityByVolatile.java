@@ -5,7 +5,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * volatile关键字，原子性
+ * volatile关键字，不保证原子性
+ * 解决方法：
+ * synchronized
+ * 使用juc下的AtomicInteger
  */
 public class AtomicityByVolatile implements Runnable{
     //volatile保证可见性和不可重排
@@ -34,7 +37,7 @@ public class AtomicityByVolatile implements Runnable{
         //关闭线程池（继续执行队列中的任务后结束）
         threadPool.shutdown();
         //需要等待上面线程执行完成后，再用main线程获取最终的结果值
-        while (Thread.activeCount() > 2){
+        while (Thread.activeCount() > 1){
             Thread.yield();
         }
         System.out.println(value+"-----------"+valueSyn);

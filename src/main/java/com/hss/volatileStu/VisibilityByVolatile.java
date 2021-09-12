@@ -1,7 +1,7 @@
 package com.hss.volatileStu;
 
 /**
- * volatile关键字，可见性
+ * volatile关键字，保证可见性
  */
 public class VisibilityByVolatile {
     /**
