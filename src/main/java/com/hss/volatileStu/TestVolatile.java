@@ -1,7 +1,10 @@
 package com.hss.volatileStu;
 
 /**
- * volatile关键字，简单使用
+ * volatile是java虚拟机提供的轻量级的同步机制
+ *  保证可见性
+ *  不保证原子性
+ *  禁止指令重排
  */
 public class TestVolatile extends Thread{
     //不加volatile关键字，主方法执行后不会停止
