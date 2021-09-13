@@ -63,7 +63,7 @@ public class AbaDemo {
     public void atomicStampedReferenceTest(){
 //        param1:Object param2:int
         AtomicStampedReference stampedReference = new AtomicStampedReference(100, 1);
-        System.out.println("-->" + stampedReference.getReference() + "\t" + stampedReference.getStamp());
+        System.out.println("init-->" + stampedReference.getReference() + "\t" + stampedReference.getStamp());
 
         new Thread(()->{
             try {
@@ -73,11 +73,15 @@ public class AbaDemo {
             }
 //            2.线程t1 ABA
             System.out.println(Thread.currentThread().getName() +
-                    "\t" + stampedReference.compareAndSet(stampedReference.getReference(),101,stampedReference.getStamp(),2) +
-                    "\t" + stampedReference.getReference());
+                    "\t" + stampedReference.compareAndSet(stampedReference.getReference(),101
+                    ,stampedReference.getStamp(),stampedReference.getStamp()+1) +
+                    "\t" + stampedReference.getReference() +
+                    "\t" + stampedReference.getStamp());
             System.out.println(Thread.currentThread().getName() +
-                    "\t" + stampedReference.compareAndSet(stampedReference.getReference(),100,stampedReference.getStamp(),3) +
-                    "\t" + stampedReference.getReference());
+                    "\t" + stampedReference.compareAndSet(stampedReference.getReference(),100
+                    ,stampedReference.getStamp(),stampedReference.getStamp()+1) +
+                    "\t" + stampedReference.getReference() +
+                    "\t" + stampedReference.getStamp());
 
         },"t1").start();
 
@@ -92,8 +96,17 @@ public class AbaDemo {
             }
 //            3.线程t2尝试CAS，由于版本号不对，修改失败
             System.out.println(Thread.currentThread().getName() +
-                    "\t" + stampedReference.compareAndSet(a,102,stamp,2) +
-                    "\t" + stampedReference.getReference());
+                    "\t" + stampedReference.compareAndSet(a,102,stamp,stamp+1) +
+                    "\t" + stampedReference.getReference() +
+                    "\t" + stampedReference.getStamp());
         },"t2").start();
+
+        while (Thread.activeCount() > 1){
+            Thread.yield();
+        }
+//        等待t1和t2执行完毕，获取最终结果
+        System.out.println(Thread.currentThread().getName() +
+                "\t" + stampedReference.getReference() +
+                "\t" + stampedReference.getStamp());
     }
 }

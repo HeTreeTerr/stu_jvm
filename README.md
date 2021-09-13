@@ -28,13 +28,21 @@ java 对象拷贝
 BigDecimal基本方法调用，并用作金额计算
 
 ### 1.1.6 com.hss.functionInterface
-函数式接口
+* 函数式接口（jdk1.8新特性）
+* lambda表达式（jdk1.8新特性）
+* 方法引用（jdk1.8新特性）
 
 ### 1.1.7 com.hss.generic
 泛型
 
 ### 1.1.8 com.hss.optional
-optional容器
+optional容器（jdk1.8新特性）
+
+### 1.1.9 com.hss.reflection
+反射
+
+### 1.1.10 com.hss.stuLocalDate
+LocalDateTime（jdk1.8新特性）
 
 ## 1.2 jvm
 ### 1.2.1 com.hss.demo1

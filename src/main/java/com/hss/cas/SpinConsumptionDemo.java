@@ -23,21 +23,6 @@ public class SpinConsumptionDemo {
         SpinConsumptionDemo consumptionDemo = new SpinConsumptionDemo();
         //LongAddr
         consumptionDemo.testLongAddr();
-        //ConcurrentHashMap
-        consumptionDemo.testConcurrentHashMap();
-    }
-
-    private void testConcurrentHashMap(){
-        /**
-         *  底层维护：
-         *  Segment<K,V>[] segments
-         *  在理想状态下，ConcurrentHashMap 可以支持 16 个线程执行并
-         *  发写操作（如果并发级别设为16），及任意数量线程的读操作。
-         */
-        Map<String,Object> map = new ConcurrentHashMap<>();
-        map.put("a","aaa");
-        map.put("b","bbb");
-
     }
 
     private void testLongAddr(){
