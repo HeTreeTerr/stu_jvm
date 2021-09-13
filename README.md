@@ -44,6 +44,9 @@ optional容器（jdk1.8新特性）
 ### 1.1.10 com.hss.stuLocalDate
 LocalDateTime（jdk1.8新特性）
 
+### 1.1.11 com.hss.stuDefault
+default（jdk1.8新特性）
+
 ## 1.2 jvm
 ### 1.2.1 com.hss.demo1
 待补齐...
