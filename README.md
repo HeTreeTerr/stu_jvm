@@ -19,11 +19,22 @@ java set使用
 1. HashSet
 2. TreeSet
 
-
-### 1.1.3 com.hss.clone
+### 1.1.4 com.hss.clone
 java 对象拷贝
 1. 浅拷贝
 2. 深拷贝
+
+### 1.1.5 com.hss.bigDecimal
+BigDecimal基本方法调用，并用作金额计算
+
+### 1.1.6 com.hss.functionInterface
+函数式接口
+
+### 1.1.7 com.hss.generic
+泛型
+
+### 1.1.8 com.hss.optional
+optional容器
 
 ## 1.2 jvm
 ### 1.2.1 com.hss.demo1
@@ -32,7 +43,7 @@ java 对象拷贝
 ### 1.2.2 com.hss.demo2
 待补齐...
 
-## 1.3 高并发变成
+## 1.3 高并发编程
 ### 1.3.1 com.hss.thread
 java线程基本使用，线程的三种实现方式：
 1. extends Thread
