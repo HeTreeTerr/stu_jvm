@@ -18,10 +18,14 @@ public class MultivariateSharingDemo {
         AtomicReference<Person> atomicReference = new AtomicReference<>();
 
         Person z3 = new Person("张三",18);
-        Person li4 = new Person("李四",24);
+        Person li4 = new Person("张三",18);
+        System.out.println("equals\t" + z3.equals(li4));
+        System.out.println("hash\t" + (z3.hashCode() == li4.hashCode()));
+
         atomicReference.set(z3);
 
         System.out.println("init\t" + atomicReference.get().toString());
+//        atomicReference.compareAndSet判定和对象地址有关，和equals、hashCode方法无关
         System.out.println("update\t" + atomicReference.compareAndSet(z3,li4) + "\t" + atomicReference.get());
         System.out.println("update\t" + atomicReference.compareAndSet(z3,li4) + "\t" + atomicReference.get());
     }
