@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * CAS的缺点？
  * ABA问题
  * 自旋锁消耗cpu
- * 多变量共享一直行问题
+ * 多变量共享问题
  */
 public class CasDemo {
 
