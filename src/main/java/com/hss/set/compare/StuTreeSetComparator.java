@@ -1,4 +1,4 @@
-package com.hss.set;
+package com.hss.set.compare;
 
 import com.hss.bean.Person;
 

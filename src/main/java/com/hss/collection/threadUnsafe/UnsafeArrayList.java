@@ -44,7 +44,7 @@ public class UnsafeArrayList {
 
     public static void main(String[] args) throws InterruptedException {
         /*
-        1.故障现象：
+        1.故障现象
             java.util.ConcurrentModificationException
 
         2.导致原因
