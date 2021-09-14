@@ -1,4 +1,4 @@
-package com.hss.collection.list;
+package com.hss.collection.threadUnsafe;
 
 import java.util.ArrayList;
 import java.util.List;
