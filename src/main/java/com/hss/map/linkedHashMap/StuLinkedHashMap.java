@@ -1,4 +1,4 @@
-package com.hss.map;
+package com.hss.map.linkedHashMap;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;
