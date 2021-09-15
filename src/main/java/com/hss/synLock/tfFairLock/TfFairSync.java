@@ -1,4 +1,4 @@
-package com.hss.synLock;
+package com.hss.synLock.tfFairLock;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;

@@ -1,4 +1,4 @@
-package com.hss.synLock;
+package com.hss.synLock.stuSynchronized;
 
 /**
  * synchronized的锁消除

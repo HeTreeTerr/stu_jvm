@@ -1,4 +1,4 @@
-package com.hss.synLock;
+package com.hss.synLock.stuSynchronized;
 
 import java.util.Calendar;
 import java.util.Date;

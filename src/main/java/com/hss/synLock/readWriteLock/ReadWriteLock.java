@@ -1,8 +1,6 @@
-package com.hss.synLock;
+package com.hss.synLock.readWriteLock;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
