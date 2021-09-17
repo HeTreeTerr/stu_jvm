@@ -6,29 +6,25 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 公平锁，最大程度保证等待
+ * 非公平锁，吞吐量高
  */
-public class TfFairSync {
+public class TfFairLock {
     //true表示公平锁  false表示非公平锁
     private ReentrantLock lock = new ReentrantLock(true);
 
     public static void main(String[] args) throws IOException {
-        TfFairSync tfFairSync = new TfFairSync();
-        Thread thread1 = new Thread("Thread1"){
-            public void run(){
+        TfFairLock tfFairSync = new TfFairLock();
+        /**
+         * new ReentrantLock()/new ReentrantLock(false)
+         * 非公平锁，不能保证FIFO
+         * new new ReentrantLock(true)
+         * 公平锁，可以保证FIFO
+         */
+        for (int i = 0; i < 1000; i++) {
+            new Thread(()->{
                 tfFairSync.fairLock();
-            }
-        };
-
-        Thread thread2 = new Thread("Thread2"){
-            public void run(){
-                tfFairSync.fairLock();
-            }
-        };
-        System.out.println("线程1启动");
-        thread1.start();
-        System.in.read();
-        System.out.println("线程2启动");
-        thread2.start();
+            },String.valueOf(i)).start();
+        }
     }
 
     public void fairLock(){
@@ -41,7 +37,6 @@ public class TfFairSync {
         if(falg){
             try{
                 System.out.println(Thread.currentThread().getName()+"--获取到锁");
-                Thread.sleep(5000);
             }catch (Exception e){
                 System.out.println(e.getStackTrace());
             }finally {
