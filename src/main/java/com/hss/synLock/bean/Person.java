@@ -4,6 +4,8 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 用户类
+ * lock 使用注意点：
+ * 一定要加锁几次，解锁几次，两两配对
  */
 public class Person{
     //ReentrantLock
@@ -14,16 +16,22 @@ public class Person{
     private String age;
 
     public String getName() {
-        lock.lock();
-        System.out.println(Thread.currentThread().getName() + "\t run getName");
-        lock.unlock();
+        try{
+            lock.lock();
+            System.out.println(Thread.currentThread().getName() + "\t run getName");
+        }finally {
+            lock.unlock();
+        }
         return name;
     }
 
     public String getAge() {
-        lock.lock();
-        System.out.println(Thread.currentThread().getName() + "\t  run getAge");
-        lock.unlock();
+        try{
+            lock.lock();
+            System.out.println(Thread.currentThread().getName() + "\t  run getAge");
+        }finally {
+            lock.unlock();
+        }
         return age;
     }
 

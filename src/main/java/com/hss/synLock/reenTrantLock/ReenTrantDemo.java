@@ -15,10 +15,10 @@ public class ReenTrantDemo {
     public static void main(String[] args) {
         ReenTrantDemo trantDemo = new ReenTrantDemo();
 //        Synchronized 可重入性测试
-        trantDemo.synchronizedApply(trantDemo);
+//        trantDemo.synchronizedApply(trantDemo);
 
 //        ReentrantLock 可重入性测试
-//        trantDemo.reenTrantLock(trantDemo);
+        trantDemo.reenTrantLock(trantDemo);
     }
 
     public void reenTrantLock(ReenTrantDemo trantDemo){
