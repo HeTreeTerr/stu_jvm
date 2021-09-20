@@ -1,4 +1,4 @@
-package com.hss.synLock.countDownLatch;
+package com.hss.synLock.closeLock;
 
 import java.util.concurrent.CountDownLatch;
 
