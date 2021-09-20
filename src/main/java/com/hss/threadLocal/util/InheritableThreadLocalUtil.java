@@ -1,11 +1,11 @@
-package com.hss.util;
+package com.hss.threadLocal.util;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ThreadLocalUtil {
+public class InheritableThreadLocalUtil {
 
-    private static ThreadLocal<Map<String,Object>> threadLocal = new ThreadLocal<>();
+    private static ThreadLocal<Map<String,Object>> threadLocal = new InheritableThreadLocal<>();
 
     public static void clearThreadLocal(){
         threadLocal.remove();

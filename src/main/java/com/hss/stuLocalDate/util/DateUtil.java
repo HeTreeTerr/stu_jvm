@@ -1,4 +1,4 @@
-package com.hss.util;
+package com.hss.stuLocalDate.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -8,7 +8,7 @@ public class DateUtil {
     /**
      * 时间戳转换成日期格式字符串
      * @param seconds 精确到秒的字符串
-     * @param formatStr
+     * @param format
      * @return
      */
     public static String timeStamp2Date(String seconds,String format) {
