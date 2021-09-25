@@ -16,8 +16,8 @@ public class TestMySpinLock {
      * method1 加锁
      */
     public void method1(){
+        lock.lock();
         try {
-            lock.lock();
             System.out.println(Thread.currentThread().getName() + "\t lock");
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {

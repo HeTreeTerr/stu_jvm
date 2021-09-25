@@ -16,8 +16,8 @@ public class Person{
     private String age;
 
     public String getName() {
+        lock.lock();
         try{
-            lock.lock();
             System.out.println(Thread.currentThread().getName() + "\t run getName");
         }finally {
             lock.unlock();
@@ -26,8 +26,8 @@ public class Person{
     }
 
     public String getAge() {
+        lock.lock();
         try{
-            lock.lock();
             System.out.println(Thread.currentThread().getName() + "\t  run getAge");
         }finally {
             lock.unlock();

@@ -33,8 +33,8 @@ public class ReadWriteLock {
     public void readLock(){
         //尝试获取读锁
         System.out.println(Thread.currentThread().getName()+"尝试获取锁");
+        readWriteLock.readLock().lock();
         try{
-            readWriteLock.readLock().lock();
             System.out.println(Thread.currentThread().getName()+"读操作---start");
             try {
                 Thread.sleep(5000);
@@ -50,8 +50,8 @@ public class ReadWriteLock {
     public void writeLock(){
         //尝试获取写锁
         System.out.println(Thread.currentThread().getName()+"尝试获取锁");
+        readWriteLock.writeLock().lock();
         try{
-            readWriteLock.writeLock().lock();
             System.out.println(Thread.currentThread().getName()+"写操作---start");
             try {
                 Thread.sleep(5000);
