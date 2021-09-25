@@ -111,3 +111,9 @@ CAS核心实现是获取值A作为预期值，满足预期更新值；
 * 自旋锁
 * 独占锁/共享锁
 * 闭锁
+
+### 1.3.5 com.hss.blockingQueue
+**阻塞队列**：
+* ArrayBlockingQueue 由数组结构组成的有界阻塞队列
+* LinkedBlockingQueue 由链表结构组成的有界（但大小默认值为Integet.MAX_VALUE）阻塞队列。
+* SynchronousQueue 不存储元素的阻塞队列，也即单个元素的队列。

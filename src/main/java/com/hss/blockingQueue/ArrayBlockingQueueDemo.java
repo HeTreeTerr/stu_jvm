@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 阻塞队列(BlockingQueue)
+ * 阻塞队列(ArrayBlockingQueue)
  * ArrayBlockingQueue 由数组结构组成的有界阻塞队列
  */
 public class ArrayBlockingQueueDemo {
