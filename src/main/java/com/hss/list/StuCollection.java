@@ -1,4 +1,4 @@
-package com.hss.collection;
+package com.hss.list;
 
 import java.util.ArrayList;
 import java.util.Collection;

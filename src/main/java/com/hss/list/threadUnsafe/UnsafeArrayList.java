@@ -1,4 +1,4 @@
-package com.hss.collection.threadUnsafe;
+package com.hss.list.threadUnsafe;
 
 import java.util.*;
 import java.util.concurrent.CopyOnWriteArrayList;

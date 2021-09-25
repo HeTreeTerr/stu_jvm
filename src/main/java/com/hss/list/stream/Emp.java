@@ -1,4 +1,4 @@
-package com.hss.collection.stream;
+package com.hss.list.stream;
 
 public class Emp {
     /** 名称 */

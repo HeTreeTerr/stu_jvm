@@ -1,4 +1,4 @@
-package com.hss.collection.list;
+package com.hss.list.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
