@@ -1,6 +1,6 @@
-package com.hss.thread;
+package com.hss.thread.join;
 
-public class TestThread extends Thread {
+public class TestThreadJoin extends Thread {
 
     public void run(){
         System.out.println("子线程执行--start");
@@ -14,7 +14,7 @@ public class TestThread extends Thread {
 
     public static void main(String[] args) throws InterruptedException {
         System.out.println("主方法--start");
-        TestThread testThread = new TestThread();
+        TestThreadJoin testThread = new TestThreadJoin();
         testThread.start();
 
 //        测试线程插队(mian)

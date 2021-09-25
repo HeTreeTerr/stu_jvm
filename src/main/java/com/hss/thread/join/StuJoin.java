@@ -1,4 +1,4 @@
-package com.hss.thread;
+package com.hss.thread.join;
 
 /**
  * 线程关键字join:

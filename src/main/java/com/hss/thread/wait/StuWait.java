@@ -1,4 +1,4 @@
-package com.hss.thread;
+package com.hss.thread.wait;
 
 /**
  * 线程关键字wait:
