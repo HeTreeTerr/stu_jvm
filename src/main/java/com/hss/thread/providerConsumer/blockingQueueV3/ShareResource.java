@@ -40,7 +40,7 @@ public class ShareResource {
             //生产
             try {
                 obj = integer.getAndAdd(1);
-                if(queue.offer(obj)){
+                if(queue.offer(obj,3,TimeUnit.SECONDS)){
                     System.out.println(Thread.currentThread().getName() + "\t生产\t"
                             + obj);
                 }
