@@ -1,7 +1,7 @@
-package com.hss.demo1;
+package com.hss.jvm.demo1;
 
-import com.hss.demo1.thread.Thread1;
-import com.hss.demo1.thread.Thread2;
+import com.hss.jvm.demo1.thread.Thread1;
+import com.hss.jvm.demo1.thread.Thread2;
 
 /**
  * 局部变量的线程安全问题

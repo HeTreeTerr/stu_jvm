@@ -1,4 +1,4 @@
-package com.hss.demo1;
+package com.hss.jvm.demo1;
 
 /**
  * 演示栈内存溢出 java.lang.StackOverflowError

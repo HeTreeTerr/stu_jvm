@@ -1,4 +1,4 @@
-package com.hss.demo2;
+package com.hss.jvm.demo2;
 
 import java.lang.ref.Reference;
 import java.lang.ref.ReferenceQueue;

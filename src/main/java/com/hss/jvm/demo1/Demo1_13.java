@@ -1,4 +1,4 @@
-package com.hss.demo1;
+package com.hss.jvm.demo1;
 
 //StringTable["a" ,"b","ab"] hashtable 结构，不能扩容
 public class Demo1_13 {
