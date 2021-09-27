@@ -37,9 +37,13 @@ public class ShareResource {
     public void provider(){
         while (flag){
             //生产
+            Integer obj;
             try {
-                System.out.println(Thread.currentThread().getName() + "\t生产\t"
-                        + queue.offer(integer.getAndAdd(1)));
+                obj = integer.getAndAdd(1);
+                if(queue.offer(obj)){
+                    System.out.println(Thread.currentThread().getName() + "\t生产\t"
+                            + obj);
+                }
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
                 e.printStackTrace();
@@ -54,10 +58,13 @@ public class ShareResource {
     public void consumer(){
         while (flag){
             //消费
+            Integer obj;
             try {
-                System.out.println(Thread.currentThread().getName() + "\t消费\t"
-                        + queue.poll());
-                TimeUnit.SECONDS.sleep(1);
+                obj = queue.poll(3,TimeUnit.SECONDS);
+                if(obj != null){
+                    System.out.println(Thread.currentThread().getName() + "\t消费\t"
+                            + obj);
+                }
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
