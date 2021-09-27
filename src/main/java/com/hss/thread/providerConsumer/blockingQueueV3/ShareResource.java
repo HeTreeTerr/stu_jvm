@@ -35,9 +35,9 @@ public class ShareResource {
      * 生产者
      */
     public void provider(){
+        Integer obj;
         while (flag){
             //生产
-            Integer obj;
             try {
                 obj = integer.getAndAdd(1);
                 if(queue.offer(obj)){
@@ -56,9 +56,9 @@ public class ShareResource {
      * 消费者
      */
     public void consumer(){
+        Integer obj;
         while (flag){
             //消费
-            Integer obj;
             try {
                 obj = queue.poll(3,TimeUnit.SECONDS);
                 if(obj != null){
