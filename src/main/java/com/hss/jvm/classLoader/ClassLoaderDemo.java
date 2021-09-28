@@ -15,6 +15,10 @@ public class ClassLoaderDemo {
         while (loader != null) {
             System.out.println(loader.toString());
             loader = loader.getParent();
+            /*
+            sun.misc.Launcher$AppClassLoader@18b4aac2(应用类加载器)
+            sun.misc.Launcher$ExtClassLoader@7bfcd12c(扩展类加载器)
+             */
         }
     }
 }
