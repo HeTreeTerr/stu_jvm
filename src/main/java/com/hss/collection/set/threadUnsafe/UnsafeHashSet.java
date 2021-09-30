@@ -1,7 +1,5 @@
-package com.hss.set.threadUnsafe;
+package com.hss.collection.set.threadUnsafe;
 
-import java.util.Collections;
-import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.CopyOnWriteArraySet;

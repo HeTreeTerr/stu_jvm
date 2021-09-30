@@ -1,4 +1,4 @@
-package com.hss.set.treeSet;
+package com.hss.collection.set.treeSet;
 
 import com.hss.bean.Person;
 

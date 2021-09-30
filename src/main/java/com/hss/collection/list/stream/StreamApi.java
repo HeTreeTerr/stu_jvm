@@ -1,4 +1,4 @@
-package com.hss.list.stream;
+package com.hss.collection.list.stream;
 
 import java.util.ArrayList;
 import java.util.Arrays;

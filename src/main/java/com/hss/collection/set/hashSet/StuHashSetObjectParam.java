@@ -1,4 +1,4 @@
-package com.hss.set.hashSet;
+package com.hss.collection.set.hashSet;
 
 import com.hss.bean.Person;
 

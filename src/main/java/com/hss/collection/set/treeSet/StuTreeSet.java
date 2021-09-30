@@ -1,4 +1,4 @@
-package com.hss.set.treeSet;
+package com.hss.collection.set.treeSet;
 
 import java.util.Iterator;
 import java.util.Set;
