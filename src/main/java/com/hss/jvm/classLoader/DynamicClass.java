@@ -1,4 +1,4 @@
-package com.hss.dynamic;
+package com.hss.jvm.classLoader;
 
 import javax.tools.*;
 import java.io.File;
