@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 public class ProviderConsumerV3 {
 
     public static void main(String[] args) throws InterruptedException {
-        ShareResource shareResource = new ShareResource();
+        ShareResourceV3 shareResource = new ShareResourceV3();
         new Thread(()->{
             shareResource.provider();
         },"t1").start();

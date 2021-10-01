@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * 共享资源类
  */
-public class ShareResource {
+public class ShareResourceV3 {
     /**
      * 是否可以生产消费
      */
@@ -23,11 +23,11 @@ public class ShareResource {
     /**
      * 构造器
      */
-    public ShareResource(){
+    public ShareResourceV3(){
         this(new ArrayBlockingQueue<Integer>(3));
     }
 
-    public ShareResource(BlockingQueue queue) {
+    public ShareResourceV3(BlockingQueue queue) {
         this.queue = queue;
     }
 
@@ -42,6 +42,9 @@ public class ShareResource {
                 obj = integer.getAndAdd(1);
                 if(queue.offer(obj,3,TimeUnit.SECONDS)){
                     System.out.println(Thread.currentThread().getName() + "\t生产\t"
+                            + obj);
+                }else{
+                    System.out.println(Thread.currentThread().getName() + "\t生产失败\t"
                             + obj);
                 }
                 TimeUnit.SECONDS.sleep(1);
@@ -63,6 +66,9 @@ public class ShareResource {
                 obj = queue.poll(3,TimeUnit.SECONDS);
                 if(obj != null){
                     System.out.println(Thread.currentThread().getName() + "\t消费\t"
+                            + obj);
+                }else{
+                    System.out.println(Thread.currentThread().getName() + "\t消费失败\t"
                             + obj);
                 }
             } catch (InterruptedException e) {
