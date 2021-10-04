@@ -7,10 +7,14 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 自定义线程池
+ * 线程池参数配置
  */
 public class CustomizeThreadPool {
 
     public static void main(String[] args) {
+        //获取cpu核数=12
+        System.out.println(Runtime.getRuntime().availableProcessors());
+
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2,//核心线程数
                 2,//临时线程数
                 1,//等待时长
@@ -18,6 +22,17 @@ public class CustomizeThreadPool {
                 new LinkedBlockingQueue<>(2),//等待队列类型及大小
                 Executors.defaultThreadFactory(),//线程工厂
                 new ThreadPoolExecutor.DiscardOldestPolicy()//拒绝策略
+
+                /*
+                核心线程数计算规则：
+                CPU密集型
+                一般公式：核心线程数 = CPU核数 + 1个线程的线程池（13）
+                IO密集型
+                一般公式：核心线程数 = CPU核数 * 2（24）
+                参考公式：CPU核数/（1-阻塞系数） 阻塞系数在0.8~0.9之间
+                12/（1-0.8）=60
+                 */
+
                 /*
                 四大拒绝策略
                 ThreadPoolExecutor.AbortPolicy 中止策略，线程池没有位置，直接抛出异常
