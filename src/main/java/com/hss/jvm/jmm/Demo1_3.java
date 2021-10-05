@@ -1,4 +1,4 @@
-package com.hss.jvm.demo1;
+package com.hss.jvm.jmm;
 
 /**
  * 局部变量的线程安全问题

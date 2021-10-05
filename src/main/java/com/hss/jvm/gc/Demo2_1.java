@@ -1,4 +1,4 @@
-package com.hss.jvm.demo2;
+package com.hss.jvm.gc;
 
 import com.hss.bean.Worker;
 

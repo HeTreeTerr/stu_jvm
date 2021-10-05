@@ -1,4 +1,4 @@
-package com.hss.jvm.demo1;
+package com.hss.jvm.jmm;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

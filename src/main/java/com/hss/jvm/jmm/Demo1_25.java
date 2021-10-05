@@ -1,4 +1,4 @@
-package com.hss.jvm.demo1;
+package com.hss.jvm.jmm;
 
 import sun.misc.Unsafe;
 

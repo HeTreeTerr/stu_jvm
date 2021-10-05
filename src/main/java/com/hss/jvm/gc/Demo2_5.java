@@ -1,4 +1,4 @@
-package com.hss.jvm.demo2;
+package com.hss.jvm.gc;
 
 /**
  * 查看虚拟机运行参数
