@@ -4,6 +4,12 @@ import com.hss.bean.Worker;
 
 import java.io.IOException;
 
+/**
+ * -XX:+PrintGCDetails 输出gc详细信息
+ * -XX:+UseSerialGC 使用串行gc
+ * -XX:MetaspaceSize=128m 元空间大小
+ * -XX:MaxTenuringThreshold=15 年轻代升到老年代的阈值
+ */
 public class Demo2_1 {
     /**
      * 终结器引用
