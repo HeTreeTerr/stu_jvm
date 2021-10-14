@@ -17,7 +17,7 @@ public class Demo2_2 {
 
     public static void main(String[] args) throws IOException {
         //强
-        //strongCitation();
+        //strongReference();
         //软
         //softReference();
         //软引用，配合引用队列
@@ -25,7 +25,7 @@ public class Demo2_2 {
     }
 
     //强引用
-    public static void strongCitation() throws IOException {
+    public static void strongReference() throws IOException {
         List<Byte[]> list = new ArrayList<>();
         for (int i = 0; i < 1; i++) {
             list.add(new Byte[_4MB]);
