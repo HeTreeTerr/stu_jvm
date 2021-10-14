@@ -12,7 +12,7 @@ import java.util.concurrent.atomic.LongAdder;
  * 如果重复尝试，一直不能满足预期值，则会一直占用cpu
  *
  * 解决方法：破坏掉for死循环，当超过一定时间或者一定次数时
- * ，return退出。JDK8新增的LongAddr,和ConcurrentHashMap类似的方法。
+ * ，return退出。JDK8新增的LongAdder,和ConcurrentHashMap类似的方法。
  * 当多个线程竞争时，将粒度变小，将一个变量拆分为多个变量，达到多个线程访问
  * 多个资源的效果，最后再调用sum把它合起来。
  */
@@ -21,11 +21,11 @@ public class SpinConsumptionDemo {
     public static void main(String[] args) {
 
         SpinConsumptionDemo consumptionDemo = new SpinConsumptionDemo();
-        //LongAddr
-        consumptionDemo.testLongAddr();
+        //LongAdder
+        consumptionDemo.testLongAdder();
     }
 
-    private void testLongAddr(){
+    private void testLongAdder(){
         /*
         底层维护：
         成员变量 transient volatile long base;
