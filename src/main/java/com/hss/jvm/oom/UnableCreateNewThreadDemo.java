@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class UnableCreateNewThreadDemo {
 
     public static void main(String[] args) {
-//        无线循环
+//        无限循环
         for (int i = 1; ; i++) {
 //            创建新的线程，同时阻塞
             new Thread(()->{
