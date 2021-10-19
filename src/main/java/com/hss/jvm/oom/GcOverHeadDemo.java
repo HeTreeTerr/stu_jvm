@@ -3,8 +3,9 @@ package com.hss.jvm.oom;
 import java.util.ArrayList;
 
 /**
+ * GC overhead limit exceeded
  * Gc回收过头
- * -Xms10m -Xmx10m -XX:+PrintGCDetails -XX:MaxDirectMemorySize=5m
+ * -Xms10m -Xmx10m -XX:+PrintGCDetails
  */
 public class GcOverHeadDemo {
 
