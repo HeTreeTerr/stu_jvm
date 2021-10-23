@@ -7,6 +7,9 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 共享资源类
+ * BlockingQueue
+ * offer
+ * poll
  */
 public class ShareResourceV3 {
     /**
