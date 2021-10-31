@@ -3,11 +3,12 @@ package com.hss.exam;
 import java.util.*;
 
 /**
+ * 两数求和（进阶版）
  * 给定一个整形数组（数组中的元素可重复），以及一个指定的值。
  * 打印出数组中两数之和为所有指定值的所有整数对。
  * 要求：时间复杂度为O(N)
  */
-public class ExpectSumOfTwoNumber {
+public class AdvancedSumOfTwoNumber {
 
     public static void main(String[] args) {
         Integer num = 15;
