@@ -5,12 +5,6 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * 共享资源类
- * BlockingQueue
- * offer
- * poll
- */
 public class ShareResourceV3 {
     /**
      * 是否可以生产消费

@@ -2,6 +2,12 @@ package com.hss.thread.providerConsumer.blockingQueueV3;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 版本V3
+ * BlockingQueue
+ * offer
+ * poll
+ */
 public class ProviderConsumerV3 {
 
     public static void main(String[] args) throws InterruptedException {

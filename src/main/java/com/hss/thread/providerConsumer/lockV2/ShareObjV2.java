@@ -16,8 +16,8 @@ class ShareObjV2{
      * 加
      */
     public void inResource(){
+        lock.lock();
         try {
-            lock.lock();
             /*
             多线程环境下，需要用while来判定，以防止出现假唤醒
              */
@@ -38,9 +38,8 @@ class ShareObjV2{
      * 减
      */
     public void deResource(){
-
+        lock.lock();
         try {
-            lock.lock();
             /*
             多线程环境下，需要用while来判定
              */
