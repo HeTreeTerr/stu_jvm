@@ -15,15 +15,34 @@ public class LockSupportDemo {
 
 //        simple();
 
-        unParkAfterPark();
+//        unParkAfterPark();
+
+        interruptAfterPark();
+    }
+
+    /**
+     * 先interrupt后park
+     */
+    public static void interruptAfterPark() {
+//        定义线程
+        Thread t1 = new Thread(() -> {
+            System.out.println(Thread.currentThread().getName() + "\t come in");
+            System.out.println(Thread.currentThread().getName() + "\t 阻塞\t" + System.currentTimeMillis());
+//            被阻塞，等待唤醒放行
+            LockSupport.park();
+            System.out.println(Thread.currentThread().getName() + "\t 唤醒\t" + System.currentTimeMillis());
+        }, "t1");
+//        启动线程
+        t1.start();
+//        中断线程
+        t1.interrupt();
     }
 
     /**
      * 先unpark后park
-     * @throws InterruptedException
      */
     public static void unParkAfterPark(){
-        //        定义线程
+//        定义线程
         Thread t1 = new Thread(() -> {
             System.out.println(Thread.currentThread().getName() + "\t come in");
 //            睡眠3秒
