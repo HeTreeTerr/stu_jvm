@@ -6,6 +6,8 @@ import java.util.concurrent.locks.ReentrantLock;
 /**
  * AQS原理探究
  * 带入一个银行办理业务的案例来模拟我们的AQS，如何进行线程的管理和唤醒机制
+ * ReentrantLock
+ *  Sync extends AbstractQueuedSynchronizer
  */
 public class AqsDemo {
 
