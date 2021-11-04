@@ -1,6 +1,4 @@
-package com.hss.stuForkJoin;
-
-import com.hss.stuForkJoin.ForkJoin;
+package com.hss.juc.stuForkJoin;
 
 import java.time.Duration;
 import java.time.Instant;

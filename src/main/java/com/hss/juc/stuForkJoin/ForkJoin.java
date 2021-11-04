@@ -1,4 +1,4 @@
-package com.hss.stuForkJoin;
+package com.hss.juc.stuForkJoin;
 
 import java.util.concurrent.RecursiveTask;
 
