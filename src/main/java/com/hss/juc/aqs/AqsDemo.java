@@ -30,6 +30,11 @@ public class AqsDemo {
 
 //        B顾客，由于受理业务的窗口只有一个（只能一个线程持有锁），此时B只能等待
         new Thread(()->{
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             lock.lock();
             try{
                 System.out.println("B Thread come in");
@@ -40,6 +45,11 @@ public class AqsDemo {
 
 //        C顾客，由于受理业务的窗口只有一个（只能一个线程持有锁），此时C只能等待
         new Thread(()->{
+            try {
+                TimeUnit.SECONDS.sleep(2);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             lock.lock();
             try{
                 System.out.println("C Thread come in");
