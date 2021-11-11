@@ -1,7 +1,5 @@
 package com.hss.uuid;
 
-import org.junit.Test;
-
 import java.util.UUID;
 
 /**
@@ -10,8 +8,7 @@ import java.util.UUID;
  */
 public class StuUuid {
 
-    @Test
-    public void testUuid(){
+    public static void main(String[] args) {
         String lId = UUID.randomUUID().toString().replace("-","");
 
         System.out.println(lId);
