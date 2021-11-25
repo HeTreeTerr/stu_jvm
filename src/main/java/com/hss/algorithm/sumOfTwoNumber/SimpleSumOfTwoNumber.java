@@ -1,4 +1,4 @@
-package com.hss.exam;
+package com.hss.algorithm.sumOfTwoNumber;
 
 import java.util.HashMap;
 import java.util.Map;

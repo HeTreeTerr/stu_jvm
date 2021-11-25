@@ -1,4 +1,4 @@
-package com.hss.exam;
+package com.hss.stringTest;
 
 /**
  * 运行环境：win10 jkd1.8
