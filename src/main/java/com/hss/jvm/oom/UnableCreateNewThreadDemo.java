@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * unable to create new native thread
  * 不能创建新的线程
- * 【谨慎运行，胡导致电脑死机】
+ * 【谨慎运行，会导致电脑死机】
  */
 public class UnableCreateNewThreadDemo {
 
