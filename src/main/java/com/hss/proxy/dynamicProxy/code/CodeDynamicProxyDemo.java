@@ -4,7 +4,8 @@ import com.hss.proxy.service.Speaker;
 import com.hss.proxy.service.impl.Zhangshan;
 
 /**
- * 动态代理演示（代码版）
+ * 伪动态代理演示（代码版）
+ * 在静态代理的基础上，实现动态化。但是一个不完全的动态
  */
 public class CodeDynamicProxyDemo {
 

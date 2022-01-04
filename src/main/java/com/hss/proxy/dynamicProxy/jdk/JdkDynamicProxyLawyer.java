@@ -13,7 +13,7 @@ public class JdkDynamicProxyLawyer implements InvocationHandler {
 
     private Object object;
 
-    public Object getNewInstall(Object proxy){
+    public Object getInstance(Object proxy){
         this.object = proxy;
         Class<?> clazz = object.getClass();
         return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);

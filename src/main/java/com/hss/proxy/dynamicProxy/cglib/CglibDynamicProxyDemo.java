@@ -18,8 +18,12 @@ public class CglibDynamicProxyDemo {
 
         System.out.println("==========》2.张三请律师申辩");
 
-        CglibDynamicProxyLawyer proxyLawyer = new CglibDynamicProxyLawyer(zhangshan);
-        Zhangshan speaker = (Zhangshan)Enhancer.create(Zhangshan.class, proxyLawyer);
+        Zhangshan speaker = null;
+        try {
+            speaker = (Zhangshan)new CglibDynamicProxyLawyer().getInstance(Zhangshan.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         speaker.speak();
         System.out.println("==========》2.end 成功");
     }
