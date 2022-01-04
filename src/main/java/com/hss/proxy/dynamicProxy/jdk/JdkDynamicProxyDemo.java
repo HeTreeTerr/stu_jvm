@@ -18,9 +18,7 @@ public class JdkDynamicProxyDemo {
         System.out.println("==========》1.end 败诉\n");
 
         System.out.println("==========》2.张三请律师申辩");
-        JdkDynamicProxyLawyer proxyLawyer = new JdkDynamicProxyLawyer(zhangshan);
-        Speaker speaker = (Speaker)Proxy.
-                newProxyInstance(JdkDynamicProxyDemo.class.getClassLoader(), new Class[]{Speaker.class}, proxyLawyer);
+        Speaker speaker = (Speaker)new JdkDynamicProxyLawyer().getNewInstall(zhangshan);
         speaker.speak();
         System.out.println("==========》2.end 成功");
     }

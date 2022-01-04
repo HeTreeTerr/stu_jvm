@@ -1,7 +1,10 @@
 package com.hss.proxy.dynamicProxy.jdk;
 
+import com.hss.proxy.service.Speaker;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 /**
  * 律师动态代理演示（jdk版）
@@ -10,8 +13,10 @@ public class JdkDynamicProxyLawyer implements InvocationHandler {
 
     private Object object;
 
-    public JdkDynamicProxyLawyer(Object proxy){
+    public Object getNewInstall(Object proxy){
         this.object = proxy;
+        Class<?> clazz = object.getClass();
+        return Proxy.newProxyInstance(clazz.getClassLoader(), clazz.getInterfaces(), this);
     }
 
     @Override
