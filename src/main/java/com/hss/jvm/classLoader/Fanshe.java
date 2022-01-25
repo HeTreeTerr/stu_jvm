@@ -2,6 +2,9 @@ package com.hss.jvm.classLoader;
 
 import com.hss.bean.Person;
 
+/**
+ * 通过反射获取对象实例
+ */
 public class Fanshe {
 
     public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException {

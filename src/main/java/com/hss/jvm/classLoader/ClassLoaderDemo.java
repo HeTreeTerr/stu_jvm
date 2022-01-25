@@ -8,7 +8,6 @@ import java.net.URL;
  * 类加载机制
  * 1.字节码
  * 2.类加载过程
- *
  * 3.双亲委派模型
  */
 public class ClassLoaderDemo {

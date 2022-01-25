@@ -1,19 +1,11 @@
-package com.hss.jvm.classLoader;
+package com.hss.jvm.classLoader.breakDelegate;
 
 import java.io.FileInputStream;
 
-/**
- * 自定义类加载器
- * 两个核心方法：
- * loadClass(String, boolean)，实现了双亲委派机制。
- * 还有一个方法是findClass，默认实现是空方法，所以我们
- * 自定义类加载器主要是重写findClass方法。
- */
-public class MyClassLoader extends ClassLoader {
-
+public class BreakDelegateLoaderV2 extends ClassLoader{
     private String classPath;
 
-    public MyClassLoader(String classPath){
+    public BreakDelegateLoaderV2(String classPath){
         this.classPath = classPath;
     }
 
@@ -36,20 +28,23 @@ public class MyClassLoader extends ClassLoader {
     }
 
     /**
-     * 打破双亲委派机制
-     * 重写类加载方法，实现自己的加载逻辑，不委派给双亲加载
      * @param name
      * @param resolve
      * @return
      * @throws ClassNotFoundException
      */
-    /*public Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException{
+    public Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException{
         synchronized (getClassLoadingLock(name)){
             Class<?> c = findLoadedClass(name);
             if(c == null){
                 long t1 = System.nanoTime();
-                c = findClass(name);
 
+                //非自定义的类还是走双亲委派加载
+                if(!name.startsWith("com.hss.classLoader")){
+                    c = this.getParent().loadClass(name);
+                }else {
+                    c = findClass(name);
+                }
                 sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
                 sun.misc.PerfCounter.getFindClasses().increment();
             }
@@ -58,7 +53,7 @@ public class MyClassLoader extends ClassLoader {
             }
             return c;
         }
-    }*/
+    }
 
     private byte[] loadByte(String name) throws Exception {
         name = name.replaceAll("\\.","/");
