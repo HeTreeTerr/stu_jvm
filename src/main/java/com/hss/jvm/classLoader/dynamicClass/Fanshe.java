@@ -1,4 +1,4 @@
-package com.hss.jvm.classLoader;
+package com.hss.jvm.classLoader.dynamicClass;
 
 import com.hss.bean.Person;
 

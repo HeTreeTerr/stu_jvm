@@ -81,9 +81,9 @@ com.hss.jvm.classLoader.breakDelegate.BreakDelegateLoaderV2@b065c63
     }
     /*
     运行结果：
-    java.lang.SecurityException: Prohibited package name: java.lang
-        at java.lang.ClassLoader.preDefineClass(ClassLoader.java:662)
-        at java.lang.ClassLoader.defineClass(ClassLoader.java:761)
+java.lang.SecurityException: Prohibited package name: java.lang
+    at java.lang.ClassLoader.preDefineClass(ClassLoader.java:662)
+    at java.lang.ClassLoader.defineClass(ClassLoader.java:761)
      */
 
 
