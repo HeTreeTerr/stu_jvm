@@ -1,4 +1,4 @@
-package com.hss.uuid;
+package com.hss.uniqueNumber.uuid;
 
 import java.util.UUID;
 
