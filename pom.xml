@@ -69,11 +69,18 @@
             <version>1.7.5</version>
             <scope>test</scope>
         </dependency>
-
+        <!--动态代理-->
         <dependency>
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>2.1_3</version>
+        </dependency>
+
+        <!-- JOL依赖 -->
+        <dependency>
+            <groupId>org.openjdk.jol</groupId>
+            <artifactId>jol-core</artifactId>
+            <version>0.9</version>
         </dependency>
     </dependencies>
 </project>
