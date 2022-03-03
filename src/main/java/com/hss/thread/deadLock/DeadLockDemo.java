@@ -11,7 +11,7 @@ package com.hss.thread.deadLock;
  * jps命令定位进程号（jps -1）
  * jstack找到死锁查看（jstack 进程号）
  */
-public class DealLockDemo {
+public class DeadLockDemo {
 
     public static void main(String[] args) {
         String A = "A";
