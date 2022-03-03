@@ -30,6 +30,9 @@ public class BasicOperator {
         // 右移(>>)
         //basicOperator.rightLeft();
 
+        // 复合运算
+        //basicOperator.compoundOperation();
+
         // X % 2^n = X & (2^n – 1)
         basicOperator.surplusBit();
     }
@@ -48,6 +51,21 @@ public class BasicOperator {
         System.out.println(Integer.toBinaryString(surplusResult));
         System.out.println(Integer.toBinaryString(bitResult));
         System.out.println(surplusResult == bitResult);
+    }
+
+    /**
+     * 复合运算
+     */
+    public void compoundOperation(){
+        System.out.println("\n=======复合运算=======");
+        /*
+        1、&= 例：a &= b 相当于a=a & b
+        2、|= 例：a |= b 相当于a=a | b
+        3、>>= 例：a >>= b 相当于a=a >> b
+        4、<<= 例：a <<= b 相当于a=a << b
+        5、^= 例：a ^= b 相当于a=a ^ b
+         */
+        System.out.println("emo!!!");
     }
 
     /**
