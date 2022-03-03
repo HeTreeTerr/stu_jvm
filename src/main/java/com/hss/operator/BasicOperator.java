@@ -12,10 +12,10 @@ public class BasicOperator {
 
     public static void main(String[] args) {
         BasicOperator basicOperator = new BasicOperator();
-        // 位运算(&)
+        // 位与运算(&)
         //basicOperator.bitOperation();
 
-        // 与运算(|)
+        // 位或运算(|)
         //basicOperator.andOperation();
 
         // 异或运算符(^)
@@ -102,7 +102,7 @@ public class BasicOperator {
     }
 
     /**
-     * 与运算(|)
+     * 与或运算(|)
      * 二进制数对比
      * 任意一项是1则为1
      * 都是0则为0
@@ -116,7 +116,7 @@ public class BasicOperator {
     }
 
     /**
-     * 位运算(&)
+     * 位与运算(&)
      * 二进制数对比
      * 都是1则为1
      * 否则为0
