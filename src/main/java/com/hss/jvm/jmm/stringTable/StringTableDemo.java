@@ -1,6 +1,6 @@
-package com.hss.stringTest;
+package com.hss.jvm.jmm.stringTable;
 
-public class StringTable {
+public class StringTableDemo {
 
     public static void main(String[] args) {
         /*String a1 = "a";//在常量池中创建a

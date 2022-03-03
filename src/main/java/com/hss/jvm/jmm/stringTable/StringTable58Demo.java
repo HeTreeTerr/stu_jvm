@@ -1,4 +1,4 @@
-package com.hss.stringTest;
+package com.hss.jvm.jmm.stringTable;
 
 /**
  * 运行环境：win10 jkd1.8
