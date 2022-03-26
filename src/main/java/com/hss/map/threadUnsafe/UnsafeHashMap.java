@@ -1,7 +1,6 @@
-package com.hss.map.ThreadUnsafe;
+package com.hss.map.threadUnsafe;
 
 import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 深入了解hashMap为什么线程不安全
