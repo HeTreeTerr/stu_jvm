@@ -28,7 +28,10 @@ public class BasicOperator {
         //basicOperator.shiftLeft();
 
         // 右移(>>)
-        //basicOperator.rightLeft();
+        //basicOperator.moveRight();
+
+        //无符号右移(>>>)
+        //basicOperator.unsignedMoveRight();
 
         // 复合运算
         //basicOperator.compoundOperation();
@@ -69,11 +72,33 @@ public class BasicOperator {
     }
 
     /**
+     * 无符号右移(>>>)
+     * 表示无符号右移，也叫逻辑右移。
+     * 即若该数为正，则高位补0；
+     * 而若该数为负数，则右移后高位同样补0；
+     */
+    public void unsignedMoveRight(){
+        /*System.out.println(Integer.toBinaryString(-2));
+        System.out.println(Integer.toBinaryString(-4));
+        System.out.println(Integer.toBinaryString(-8));
+        System.out.println(Integer.toBinaryString(-16));*/
+        System.out.println("\n=======>>>=======");
+        int c = 16;
+        int d = -16;
+        System.out.println("c=" + Integer.toBinaryString(c));
+        System.out.println("C=00" + Integer.toBinaryString((c >>> 2)));
+
+        System.out.println("d=" + Integer.toBinaryString(d));
+        System.out.println("D=00" + Integer.toBinaryString((d >>> 2)));
+
+    }
+
+    /**
      * 右移(>>)
      * 二进制数，向右移动n位
      * 等价于 除以2的n次幂
      */
-    public void rightLeft(){
+    public void moveRight(){
         System.out.println("\n=======>>=======");
         int result = a >> 2;
         System.out.println("a=" + Integer.toBinaryString(a));
