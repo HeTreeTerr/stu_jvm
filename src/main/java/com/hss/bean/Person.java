@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  * 人类实体
  * TreeSet:implements Comparable<Person>
+ * TreeMap:implements Comparable<Person>
  */
 public class Person{
 

@@ -2,6 +2,7 @@ package com.hss.collection.set.treeSet;
 
 import com.hss.bean.Person;
 
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Set;
 import java.util.TreeSet;
@@ -16,8 +17,19 @@ public class StuTreeSetObjectParam {
 
     public static void main(String[] args) {
 
+        //元素需要实现Comparable，并覆盖compareTo方法
+        //Set<Person> treeSet = new TreeSet<Person>();
+
         //创建集合
-        Set<Person> treeSet = new TreeSet<Person>();
+        Set<Person> treeSet = new TreeSet<Person>(new Comparator<Person>() {
+            //先按姓名比，然后再按年龄比
+            @Override
+            public int compare(Person o1, Person o2) {
+                int n1 = o1.getName().compareTo(o2.getName());
+                int n2 = o1.getAge() - o2.getAge();
+                return n1 != 0 ? n1 : n2;
+            }
+        });
         //1.添加
         Person person1 = new Person("xyz",46);
         Person person2 = new Person("hello",35);

@@ -13,6 +13,9 @@ import java.util.TreeMap;
 public class StuTreeMap {
 
     public static void main(String[] args) {
+        //元素需要实现Comparable，并覆盖compareTo方法
+        //TreeMap<Person, String> treeMap = new TreeMap<Person, String>();
+
         //创建集合
         TreeMap<Person, String> treeMap = new TreeMap<Person, String>(new Comparator<Person>() {
             //先按姓名比，然后再按年龄比
