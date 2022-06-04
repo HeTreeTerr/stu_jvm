@@ -57,7 +57,7 @@ public class SnowFlakeUtil {
      * @param args
      */
     public static void main(String[] args) {
-        for (int i = 0; i < 500; i++) {
+        for (int i = 0; i < 10; i++) {
             // 生成唯一id
             Long id = SnowFlakeUtil.getId();
             System.out.println(String.valueOf(id));
