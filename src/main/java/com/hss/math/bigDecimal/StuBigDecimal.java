@@ -80,6 +80,18 @@ public class StuBigDecimal {
      * 小数点
      */
     public static void decimalPoint(){
+        /*
+        舍入模式：
+        ROUND_DOWN 舍弃多余的小数位
+        ROUND_UP 多余的小数位向上补
+        ROUND_HALF_UP 四舍五入（5向上补）
+        ROUND_HALF_DOWN 四舍五入（5向下舍）
+
+        todo 待验证...
+        ROUND_CEILING 接近正无穷大的舍入
+        ROUND_FLOOR 接近负无穷大的舍入
+        ROUND_HALF_EVEN 向最接近的数字舍入
+         */
         BigDecimal param1 = new BigDecimal("3.1415926");
         System.out.println("小数点位数：" + param1.scale());
         //保留小数点后两位，并四舍五入
