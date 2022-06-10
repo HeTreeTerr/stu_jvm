@@ -12,6 +12,7 @@ public class StuBigDecimal {
         //比较大小
 //        comparisonOfSize();
 
+        //基础运算
         basicOperations();
     }
 
