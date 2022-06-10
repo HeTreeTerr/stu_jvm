@@ -13,7 +13,10 @@ public class StuBigDecimal {
 //        comparisonOfSize();
 
         //基础运算
-        basicOperations();
+//        basicOperations();
+
+        //小数点
+        decimalPoint();
     }
 
     /**
@@ -71,5 +74,16 @@ public class StuBigDecimal {
         //除（四舍五入）
         res = param1.divide(param2,BigDecimal.ROUND_HALF_UP);
         System.out.println("p1 p2 相除 = " + res);
+    }
+
+    /**
+     * 小数点
+     */
+    public static void decimalPoint(){
+        BigDecimal param1 = new BigDecimal("3.1415926");
+        System.out.println("小数点位数：" + param1.scale());
+        //保留小数点后两位，并四舍五入
+        BigDecimal res = param1.setScale(2, BigDecimal.ROUND_HALF_UP);
+        System.out.println("res = " + res);
     }
 }
