@@ -1,4 +1,4 @@
-package com.hss.collection.list.collections;
+package com.hss.collection.collections;
 
 import java.util.*;
 
