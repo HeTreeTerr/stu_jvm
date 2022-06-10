@@ -42,5 +42,9 @@ public class StuBigDecimal {
         }else if (res == -1){
             System.out.println("p1 小于 p2");
         }
+
+        // 0
+        BigDecimal zero = BigDecimal.ZERO;
+        System.out.println(zero.toString());
     }
 }
