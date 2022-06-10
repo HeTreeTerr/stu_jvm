@@ -10,7 +10,9 @@ public class StuBigDecimal {
 //        countPremium();
 
         //比较大小
-        comparisonOfSize();
+//        comparisonOfSize();
+
+        basicOperations();
     }
 
     /**
@@ -46,5 +48,27 @@ public class StuBigDecimal {
         // 0
         BigDecimal zero = BigDecimal.ZERO;
         System.out.println(zero.toString());
+    }
+
+    /**
+     * 基础运算
+     * 加/减/乘/除
+     */
+    public static void basicOperations(){
+        BigDecimal param1 = new BigDecimal("10");
+        BigDecimal param2 = new BigDecimal("3");
+        BigDecimal res = null;
+        //加
+        res = param1.add(param2);
+        System.out.println("p1 p2 相加 = " + res);
+        //减
+        res = param1.subtract(param2);
+        System.out.println("p1 p2 相减 = " + res);
+        //乘
+        res = param1.multiply(param2);
+        System.out.println("p1 p2 相乘 = " + res);
+        //除（四舍五入）
+        res = param1.divide(param2,BigDecimal.ROUND_HALF_UP);
+        System.out.println("p1 p2 相除 = " + res);
     }
 }
