@@ -29,7 +29,7 @@ public class StuCollections {
         // 数组 集合转换
 //        collections.arr2List(list);
 
-        // 单节点集合
+        // 单节点对象
         collections.singletonObject();
     }
 
