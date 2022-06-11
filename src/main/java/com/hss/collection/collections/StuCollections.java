@@ -112,12 +112,13 @@ public class StuCollections {
      * 单节点对象
      */
     public void singletonObject(){
+        // 单元素 list
         List<String> singletonList = Collections.singletonList("jojo");
         System.out.println("list =" + singletonList);
-
+        // 单元素 set
         Set<String> singleton = Collections.singleton("jojo");
         System.out.println("set =" + singleton);
-
+        // 单节点 map
         Map<String, String> singletonMap = Collections.singletonMap("k1", "vi");
         System.out.println("map =" + singletonMap);
     }
