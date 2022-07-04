@@ -15,7 +15,7 @@ public class PopulationRegister {
     }
 
     /**
-     * 获取人后信息
+     * 获取人口信息
      * @param name
      * @param age
      * @param areaCode
