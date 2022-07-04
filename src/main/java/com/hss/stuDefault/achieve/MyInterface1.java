@@ -1,4 +1,4 @@
-package com.hss.stuDefault;
+package com.hss.stuDefault.achieve;
 
 public interface MyInterface1 {
 

@@ -1,6 +1,9 @@
 package com.hss.stuDefault;
 
-public class DefaultTest extends AbstractClass implements MyInterface2{
+import com.hss.stuDefault.achieve.MyInterface2;
+import com.hss.stuDefault.inherit.AbstractClass;
+
+public class DefaultTest implements MyInterface2 {
 
     public static void main(String[] args) {
 //        interface static使用
