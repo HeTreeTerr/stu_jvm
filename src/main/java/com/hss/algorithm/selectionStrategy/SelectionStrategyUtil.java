@@ -3,6 +3,8 @@ package com.hss.algorithm.selectionStrategy;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -83,22 +85,22 @@ public class SelectionStrategyUtil {
         }
     }
 
-//    static volatile AtomicInteger incrementValue = new AtomicInteger(0);
-//
-//    public static void main(String[] args) throws ExecutionException, InterruptedException {
+    static volatile AtomicInteger incrementValue = new AtomicInteger(0);
+
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
 
 //        测试轮询
-        /*List<Object> list = new CopyOnWriteArrayList<>();
+        List<Object> list = new CopyOnWriteArrayList<>();
         list.add("aaa");
         list.add("bbb");
-        list.add("ccc");*/
+        list.add("ccc");
 
 //        单线程
-        /*for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 100; i++) {
             Map<String, Object> map = SelectionStrategyUtil.pollingStrategy(list, incrementValue);
             incrementValue = (AtomicInteger)map.get("next");
             System.out.println("选中机构=" + map.get("currentObj"));
-        }*/
+        }
 
 //        高并发
         /*ArrayList<FutureTask<Object>> futures =new ArrayList<>();
@@ -159,5 +161,5 @@ public class SelectionStrategyUtil {
         }
         System.out.println(anum +"-"+ bnum +"-"+ cnum);*/
 
-//    }
+    }
 }
