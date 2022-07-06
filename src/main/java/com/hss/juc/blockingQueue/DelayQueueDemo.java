@@ -1,6 +1,5 @@
 package com.hss.juc.blockingQueue;
 
-import com.cmbc.tradeBank.netTradeClient.entity.Item;
 import com.hss.juc.blockingQueue.bean.DelayedItem;
 
 import java.time.LocalDateTime;
@@ -9,6 +8,8 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 延迟队列(DelayQueue)
+ * 经常被用于缓存或定时任务等的设计
+ * 异步回调的重试
  */
 public class DelayQueueDemo {
 
