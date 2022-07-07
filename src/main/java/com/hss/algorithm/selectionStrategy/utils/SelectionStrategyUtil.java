@@ -26,6 +26,17 @@ public class SelectionStrategyUtil {
         return currentObj;
     }
 
+    /**
+     * 随机
+     * @param elements
+     * @return
+     */
+    public static Object randomStrategy(List<Object> elements){
+        int size = elements.size();
+        int randomNum = (int) (Math.random() * size);
+        Object currentObj = elements.get(randomNum);
+        return currentObj;
+    }
 
     /**
      * 权重随机
