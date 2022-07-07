@@ -22,6 +22,7 @@ public class SelectionStrategyUtil {
             incrementValue.set(0);
         }
         Object currentObj = elements.get(incrementValue.getAndIncrement());
+        System.out.println(incrementValue + "--选中的机构是:" + currentObj.toString());
         return currentObj;
     }
 

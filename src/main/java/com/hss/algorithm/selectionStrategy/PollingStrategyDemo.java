@@ -4,7 +4,6 @@ import com.hss.algorithm.selectionStrategy.utils.SelectionStrategyUtil;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -45,7 +44,6 @@ public class PollingStrategyDemo {
         for (int i = 0; i < 50; i++) {
             FutureTask<Object> futureTask = new FutureTask<>(()->{
                 Object currentObj = SelectionStrategyUtil.pollingStrategy(list, incrementValue);
-                System.out.println(incrementValue + "--选中的机构是:" + currentObj.toString());
                 return currentObj;
             });
             executorService.execute(futureTask);
