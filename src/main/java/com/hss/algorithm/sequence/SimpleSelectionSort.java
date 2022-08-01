@@ -22,9 +22,10 @@ public class SimpleSelectionSort {
         int[] numArr = {15, 48, 99, 55, 66, 78};
         for (int i = 0; i < numArr.length - 1; i++) {
             System.out.println(i + "--" + numArr[i]);
-            int minIndex = i;
+            int minIndex = -1;
             for(int j=i; j < numArr.length-1; j++){
-                System.out.println(numArr[j] + "--" + numArr[j+1]);
+                //System.out.println(numArr[j] + "--" + numArr[j+1]);
+                minIndex = j;
             }
             //todo...
         }
