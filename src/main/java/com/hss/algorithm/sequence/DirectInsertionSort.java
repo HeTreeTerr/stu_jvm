@@ -3,6 +3,8 @@ package com.hss.algorithm.sequence;
 /**
  * <p>
  * 直接插入排序
+ * 从头开始遍历，每一轮遍历后，可以确定元素的局部有序。
+ * 遍历结束后，完成排序
  * </p>
  *
  * @author Hss
