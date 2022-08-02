@@ -21,13 +21,19 @@ public class SimpleSelectionSort {
          */
         int[] numArr = {15, 48, 99, 55, 66, 78};
         for (int i = 0; i < numArr.length - 1; i++) {
-            System.out.println(i + "--" + numArr[i]);
-            int minIndex = -1;
-            for(int j=i; j < numArr.length-1; j++){
-                //System.out.println(numArr[j] + "--" + numArr[j+1]);
-                minIndex = j;
+            //System.out.println(i + "--" + numArr[i]);
+            int minIndex = i;
+            for(int j=i+1; j < numArr.length; j++){
+                if(numArr[minIndex] > numArr[j]){
+                    minIndex = j;
+                }
             }
-            //todo...
+            if(i != minIndex){
+                int temp = numArr[i];
+                numArr[i] = numArr[minIndex];
+                numArr[minIndex] = temp;
+            }
         }
+        System.out.println(numArr);
     }
 }
