@@ -19,7 +19,8 @@ public class QuickSort {
         88 45 48 78 6464 154 1 - 4 left=0 right=6 pivot=0 index=4 j=5
         88 45 48 78 1 154 6464 - 5 left=0 right=6 pivot=0 index=5 j=6
         1 45 48 78 88 154 6464 - 6 left=0 right=6 pivot=0 index=5 partitionIndex=4
-        todo...
+        得到 4号位是88
+        0-3 5-6分别计算，最终得到结果
          */
         QuickSort sort = new QuickSort();
         int numArr[] = {88, 45, 48, 78, 6464, 154, 1};
