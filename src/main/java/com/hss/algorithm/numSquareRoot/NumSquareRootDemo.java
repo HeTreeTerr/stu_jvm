@@ -2,7 +2,7 @@ package com.hss.algorithm.numSquareRoot;
 
 /**
  * <p>
- *
+ * 求一个数的平方根
  * </p>
  *
  * @author Hss
@@ -12,7 +12,7 @@ public class NumSquareRootDemo {
 
     public static void main(String[] args) {
         NumSquareRootDemo demo = new NumSquareRootDemo();
-        int x = 1;
+        int x = 55;
         System.out.println("预期：" + (int)Math.sqrt(x));
         System.out.println("输出：" + demo.square(x));
     }
