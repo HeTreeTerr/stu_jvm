@@ -31,13 +31,17 @@ public class SortedArrayToBSTDemo {
     }
 
     /**
-     * left:0 right:4 -> mid:2 == node:0
+     * 根:left:0 right:4 -> mid:2 == node:0
      *  左:left:0 right:1 -> mid:0 == node:-10
      *      左:left:0 right:-1 -> null
      *      右:left:1 right:1 -> mid:1 == -3
+     *          左:left:1 right:0 -> null
+     *          右:left:2 right:1 -> null
      *  右:left:3 right:4 -> mid:3 == node:5
      *      左:left:3 right:2 -> null
      *      右:left:4 right:4 -> mid:4 == 9
+     *          左:left:4 right:3 -> null
+     *          右:left:5 right:4 -> null
      *
      * @param nums
      * @param left
