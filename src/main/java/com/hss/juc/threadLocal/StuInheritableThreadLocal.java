@@ -1,6 +1,6 @@
-package com.hss.threadLocal;
+package com.hss.juc.threadLocal;
 
-import com.hss.threadLocal.util.InheritableThreadLocalUtil;
+import com.hss.juc.threadLocal.util.InheritableThreadLocalUtil;
 
 import java.util.HashMap;
 import java.util.Map;

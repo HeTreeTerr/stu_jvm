@@ -1,7 +1,7 @@
-package com.hss.threadLocal;
+package com.hss.juc.threadLocal;
 
-import com.hss.threadLocal.util.PermissionUtil;
-import com.hss.threadLocal.util.ThreadLocalUtil;
+import com.hss.juc.threadLocal.util.PermissionUtil;
+import com.hss.juc.threadLocal.util.ThreadLocalUtil;
 
 import java.util.HashMap;
 import java.util.Map;

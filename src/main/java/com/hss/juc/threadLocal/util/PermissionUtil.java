@@ -1,4 +1,4 @@
-package com.hss.threadLocal.util;
+package com.hss.juc.threadLocal.util;
 
 public class PermissionUtil {
 
