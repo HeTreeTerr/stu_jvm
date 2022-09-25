@@ -1,4 +1,4 @@
-package com.hss.thread.interrupt;
+package com.hss.juc.thread.interrupt;
 
 import java.util.concurrent.TimeUnit;
 

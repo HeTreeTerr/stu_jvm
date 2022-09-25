@@ -1,4 +1,4 @@
-package com.hss.thread.join;
+package com.hss.juc.thread.join;
 
 public class TestThreadJoin extends Thread {
 

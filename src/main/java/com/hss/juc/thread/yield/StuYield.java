@@ -1,4 +1,4 @@
-package com.hss.thread.yield;
+package com.hss.juc.thread.yield;
 
 /**
  * 线程关键字yield：

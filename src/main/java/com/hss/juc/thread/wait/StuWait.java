@@ -1,4 +1,4 @@
-package com.hss.thread.wait;
+package com.hss.juc.thread.wait;
 
 /**
  * 线程关键字wait:

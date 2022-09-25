@@ -1,4 +1,4 @@
-package com.hss.thread.deadLock;
+package com.hss.juc.thread.deadLock;
 
 import java.util.concurrent.TimeUnit;
 

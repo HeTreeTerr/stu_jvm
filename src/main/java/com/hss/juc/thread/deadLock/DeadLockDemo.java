@@ -1,4 +1,4 @@
-package com.hss.thread.deadLock;
+package com.hss.juc.thread.deadLock;
 
 /**
  * 死锁
