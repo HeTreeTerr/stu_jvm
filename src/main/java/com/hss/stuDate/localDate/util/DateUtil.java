@@ -1,4 +1,4 @@
-package com.hss.stuLocalDate.util;
+package com.hss.stuDate.localDate.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
