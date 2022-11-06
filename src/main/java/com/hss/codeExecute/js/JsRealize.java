@@ -9,6 +9,11 @@ import javax.script.*;
 public class JsRealize {
 
     /**
+     * 模板
+     */
+    private final static String CODE_TEMPLATE = "function relationEstimate() { return ${expression};}";
+
+    /**
      * 执行js函数，并获取返回值
      * @param expression
      * @return
@@ -21,7 +26,7 @@ public class JsRealize {
         Bindings bindings = se.createBindings();
         se.setBindings(bindings, ScriptContext.ENGINE_SCOPE);
         // 拼接JS代码
-        String functionCode = "function relationEstimate() { return " + expression + ";}";
+        String functionCode = CODE_TEMPLATE.replace("${expression}",expression);
         System.out.println(functionCode);
         se.eval(functionCode);
         // 是否可调用
