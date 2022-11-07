@@ -42,6 +42,9 @@ public class CustomizeThreadPool {
                  */
         );
 
+        //允许核心线程被超时销毁
+        poolExecutor.allowCoreThreadTimeOut(true);
+
         try{
             for (int i = 1; i <= 10; i++) {
                 final int fini = i;
