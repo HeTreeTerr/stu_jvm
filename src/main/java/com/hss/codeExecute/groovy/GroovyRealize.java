@@ -22,7 +22,11 @@ public class GroovyRealize {
     /** 查找并创建指定脚本引擎 */
     private ScriptEngine engine = new ScriptEngineManager().getEngineByName("groovy");
 
-    public void testByFunction(Map<String,Object> param){
+    /**
+     * 执行groovy方法，并获取结果
+     * @param param
+     */
+    public void runByFunction(Map<String,Object> param){
         // 初始化Bindings
         Bindings bindings = engine.createBindings();
         // 绑定参数
@@ -47,6 +51,6 @@ public class GroovyRealize {
         map.put("a",false);
         map.put("b",false);
         //执行脚本
-        realize.testByFunction(map);
+        realize.runByFunction(map);
     }
 }
