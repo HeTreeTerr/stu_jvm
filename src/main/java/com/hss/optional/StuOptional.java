@@ -1,6 +1,6 @@
 package com.hss.optional;
 
-import com.hss.mybatis.pojo.User;
+import com.hss.proxy.mybatisProxy.pojo.User;
 
 import java.util.Optional;
 

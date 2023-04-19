@@ -1,6 +1,6 @@
-package com.hss.mybatis.proxy;
+package com.hss.proxy.mybatisProxy.proxy;
 
-import com.hss.mybatis.pojo.User;
+import com.hss.proxy.mybatisProxy.pojo.User;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

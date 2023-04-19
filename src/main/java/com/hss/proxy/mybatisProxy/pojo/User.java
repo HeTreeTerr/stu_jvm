@@ -1,4 +1,4 @@
-package com.hss.mybatis.pojo;
+package com.hss.proxy.mybatisProxy.pojo;
 
 import java.io.Serializable;
 import java.util.Optional;
