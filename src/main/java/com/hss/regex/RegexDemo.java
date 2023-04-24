@@ -1,5 +1,7 @@
 package com.hss.regex;
 
+import java.util.regex.Pattern;
+
 /**
  * <p>
  * java 正则表达
@@ -47,12 +49,26 @@ public class RegexDemo {
         System.out.println(pw7.matches(PW_PATTERN));*/
 
         //工具类
-        System.out.println(RegexUtil.pwdFormat(pw1));
+        /*System.out.println(RegexUtil.pwdFormat(pw1));
         System.out.println(RegexUtil.pwdFormat(pw2));
         System.out.println(RegexUtil.pwdFormat(pw3));
         System.out.println(RegexUtil.pwdFormat(pw4));
         System.out.println(RegexUtil.pwdFormat(pw5));
         System.out.println(RegexUtil.pwdFormat(pw6));
-        System.out.println(RegexUtil.pwdFormat(pw7));
+        System.out.println(RegexUtil.pwdFormat(pw7));*/
+
+        //matches
+        System.out.println("---------正则和字符双向完全匹配---------");
+        System.out.println(Pattern.matches("^H0", "H0"));
+        System.out.println(Pattern.matches("^H0", "H01"));
+        System.out.println(Pattern.matches("^H0", "1H0"));
+        System.out.println(Pattern.matches("^H0", "1H01"));
+        //matcher
+        System.out.println("---------字符包含正则即可---------");
+        System.out.println(Pattern.compile("^H0").matcher("H0").find());
+        System.out.println(Pattern.compile("^H0").matcher("H01").find());
+        System.out.println(Pattern.compile("^H0").matcher("1H0").find());
+        System.out.println(Pattern.compile("^H0").matcher("1H01").find());
+
     }
 }
