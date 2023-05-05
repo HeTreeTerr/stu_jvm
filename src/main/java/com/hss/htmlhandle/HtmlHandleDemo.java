@@ -1,4 +1,4 @@
-package com.hss.htmlencode;
+package com.hss.htmlhandle;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -11,13 +11,13 @@ import java.net.URLEncoder;
 
 /**
  * <p>
- * java html片段操作
+ * java 操作处理 html片段
  * </p>
  *
  * @author Hss
  * @date 2023-05-05
  */
-public class HtmlEncodeDemo {
+public class HtmlHandleDemo {
 
     private final static String IMG_TAG = "img";
 
