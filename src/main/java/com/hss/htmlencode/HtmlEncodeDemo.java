@@ -7,6 +7,7 @@ import org.jsoup.select.Elements;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
+import java.net.URLEncoder;
 
 /**
  * <p>
@@ -25,6 +26,8 @@ public class HtmlEncodeDemo {
     private final static String SRC_ATTR = "src";
 
     private final static String HREF_ATTR = "href";
+
+    private final static String VERSION_ATTR = "version";
 
     public static void main(String[] args) throws UnsupportedEncodingException {
         //转码
@@ -46,12 +49,14 @@ public class HtmlEncodeDemo {
         for (Element imgTag : imgTags){
             String oldSrc = imgTag.attr(SRC_ATTR);
             imgTag.attr(SRC_ATTR,oldSrc + ".d");
+            imgTag.attr(VERSION_ATTR,"10");
         }
         //链接
         Elements aTags = document.getElementsByTag(A_TAG);
         for (Element aTag : aTags){
             String aHref = aTag.attr(HREF_ATTR);
             aTag.attr(HREF_ATTR,aHref + ".d");
+            aTag.attr(VERSION_ATTR,"10");
         }
         System.out.println("\n" + document.body().html());
     }
