@@ -1,4 +1,4 @@
-package java.lang;
+//package java.lang;
 
 /**
  * 类加载机制测试
