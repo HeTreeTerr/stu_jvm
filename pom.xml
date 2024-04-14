@@ -95,7 +95,7 @@
                     <encoding>UTF-8</encoding>
                     <compilerArguments>
                         <verbose/>
-                        <!-- 将jdk的依赖jar打入项目中，这样项目中使用的jdk的依赖就尅正常使用 -->
+                        <!-- 将jdk的依赖jar打入项目中，这样项目中使用的jdk的依赖就可正常使用 -->
                         <bootclasspath>${java.home}/lib/rt.jar
                         </bootclasspath>
                     </compilerArguments>
