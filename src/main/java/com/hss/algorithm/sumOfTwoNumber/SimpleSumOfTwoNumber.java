@@ -46,12 +46,14 @@ public class SimpleSumOfTwoNumber {
 
     /**
      * 双层循环，暴力解题
+     * 时间复杂度：O(n^2)
+     * 空间复杂度：O(1)
      * @param nums
      * @param target
      * @return
      */
     public static int[] twoSum1(int[] nums, int target) {
-        for(int i = 0; i < nums.length; i++){
+        for(int i = 0; i < nums.length - 1; i++){
             System.out.println(nums[i] + "-------------");
             for(int j=i+1; j < nums.length; j++){
                 System.out.println(nums[j]);
