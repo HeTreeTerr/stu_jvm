@@ -25,13 +25,15 @@ public class SimpleSumOfTwoNumber {
     }
 
     /**
-     *
+     * 3、一遍hash表
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
      * @param nums
      * @param target
      * @return
      */
-    public static int[] twoSum2(int[] nums, int target) {
-        Map<Integer, Integer> map = new HashMap<>();
+    public static int[] twoSum3(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>(16);
         for(int i = 0; i < nums.length; i++){
             System.out.println(i + "---------" + nums[i]);
             int result = target - nums[i];
@@ -45,7 +47,31 @@ public class SimpleSumOfTwoNumber {
     }
 
     /**
-     * 双层循环，暴力解题
+     * 2、两遍hash表
+     * 时间复杂度：O(n)
+     * 空间复杂度：O(n)
+     * @param nums
+     * @param target
+     * @return
+     */
+    public static int[] twoSum2(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap<>(16);
+        //将数组所有数据维护到Map中
+        for (int i = 0; i < nums.length; i++){
+            map.put(nums[i],i);
+        }
+        //System.out.println(map);
+        for (int i = 0; i < nums.length; i++){
+            int j = target - nums[i];
+            if(map.containsKey(j) && i != map.get(j)){
+                return new int[] {i,map.get(j)};
+            }
+        }
+        return null;
+    }
+
+    /**
+     * 1、双层循环，暴力解题
      * 时间复杂度：O(n^2)
      * 空间复杂度：O(1)
      * @param nums
@@ -54,7 +80,7 @@ public class SimpleSumOfTwoNumber {
      */
     public static int[] twoSum1(int[] nums, int target) {
         for(int i = 0; i < nums.length - 1; i++){
-            System.out.println(nums[i] + "-------------");
+            //System.out.println(nums[i] + "-------------");
             for(int j=i+1; j < nums.length; j++){
                 System.out.println(nums[j]);
                 if(target == (nums[i] + nums[j])){
