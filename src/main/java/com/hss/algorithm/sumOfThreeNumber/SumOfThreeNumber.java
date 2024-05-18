@@ -20,7 +20,56 @@ public class SumOfThreeNumber {
         //int[] nums = new int[] {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
         //System.out.println(threeSum01(nums).toString());
 
-        System.out.println(threeSum02(nums).toString());
+        //System.out.println(threeSum02(nums).toString());
+        System.out.println(threeSum03(nums).toString());
+    }
+
+    /**
+     * 方法三：双指针法
+     * @param nums
+     * @return
+     */
+    public static List<List<Integer>> threeSum03(int[] nums) {
+        //给数组排序
+        Arrays.sort(nums);
+        //定义返回list
+        List<List<Integer>> resList = new ArrayList<>();
+        //给数组排序
+        Arrays.sort(nums);
+        for(int i = 0; i < nums.length; i++){
+            //如果nums[i]大于0，代表后面没有符合的数据集，终止循环
+            if(nums[i] > 0){
+                break;
+            }
+            //值重复的元素，只对比第一个
+            if(i > 0 && nums[i] == nums[i-1]){
+                continue;
+            }
+            //System.out.println(nums[i]);
+            //定义指针
+            int left = i+1;
+            int right = nums.length - 1;
+            while (left < right){
+                //将i点位、left点位、right点位值进行比对
+                int sum = nums[i] + nums[left] + nums[right];
+                if(sum == 0){
+                    resList.add(Arrays.asList(nums[i],nums[left],nums[right]));
+                    left ++;
+                    right --;
+                    while (left < right && nums[left] == nums[left-1]){
+                        left ++;
+                    }
+                    while (left < right && nums[right] == nums[right+1]){
+                        right --;
+                    }
+                }else if(sum > 0){
+                    right --;
+                }else {
+                    left ++;
+                }
+            }
+        }
+        return resList;
     }
 
     /**
