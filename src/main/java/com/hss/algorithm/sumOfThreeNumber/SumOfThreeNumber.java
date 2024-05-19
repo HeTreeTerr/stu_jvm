@@ -16,8 +16,8 @@ public class SumOfThreeNumber {
 
     public static void main(String[] args) {
 
-        int[] nums = new int[] {-1, -1, 0, 9, 2, 0, 0, 0};
-        //int[] nums = new int[] {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
+        //int[] nums = new int[] {-1, -1, 0, 9, 2, 0, 0, 0};
+        int[] nums = new int[] {-4,-2,1,-5,-4,-4,4,-2,0,4,0,-2,3,1,-5,0};
         //System.out.println(threeSum01(nums).toString());
 
         //System.out.println(threeSum02(nums).toString());
@@ -26,6 +26,7 @@ public class SumOfThreeNumber {
 
     /**
      * 方法三：双指针法
+     * 时间复杂度：O(n^2)
      * @param nums
      * @return
      */
@@ -47,7 +48,7 @@ public class SumOfThreeNumber {
             }
             //System.out.println(nums[i]);
             //定义指针
-            int left = i+1;
+            int left = i + 1;
             int right = nums.length - 1;
             while (left < right){
                 //将i点位、left点位、right点位值进行比对
