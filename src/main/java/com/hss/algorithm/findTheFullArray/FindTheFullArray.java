@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * <p>
- * 定义一个数组，获取数组所有可能的排列（元素不重读）
+ * 定义一个数组，获取数组所有可能的排列
  * </p>
  *
  * @author Hss
@@ -20,7 +20,7 @@ public class FindTheFullArray {
     public static void main(String[] args) {
         //原始数组（入参）
         //int[] nums = new int[]{1, 2, 3};
-        int[] nums = new int[]{1, 1, 3};
+        int[] nums = new int[]{1, 3, 1};
         System.out.println(permutation(nums));
     }
 
@@ -62,7 +62,7 @@ public class FindTheFullArray {
 
             //将该点位移出
             uses[i] = false;
-            path.remove(new Integer(nums[i]));
+            path.remove(path.size() - 1);
         }
     }
 }
