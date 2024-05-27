@@ -21,7 +21,7 @@ public class FindTheFullArray {
         //原始数组（入参）
         //int[] nums = new int[]{1, 2, 3};
         int[] nums = new int[]{1, 3, 1};
-        System.out.println(permutation(nums));
+        System.out.println(permute(nums));
     }
 
     /**
@@ -29,7 +29,7 @@ public class FindTheFullArray {
      * @param nums
      * @return
      */
-    private static List<List<Integer>> permutation(int[] nums){
+    public static List<List<Integer>> permute(int[] nums){
         List<List<Integer>> result = new ArrayList<>();
         coreRecursionCompute(nums, new boolean[nums.length], new ArrayList<>(), result);
         return result;
