@@ -14,36 +14,37 @@ import java.util.List;
 public class FindTheFullArray {
 
     /**
-     * 定义集合res接收结果集
-     */
-    private final static List<List<Integer>> RES = new ArrayList<>();
-
-    /**
      * 主方法
      * @param args
      */
     public static void main(String[] args) {
         //原始数组（入参）
         int[] nums = new int[]{1, 2, 3};
-        permutation(nums);
-        System.out.println(RES);
+        System.out.println(permutation(nums));
     }
 
     /**
      * 获取排列
      * @param nums
+     * @return
      */
-    private static void permutation(int[] nums){
-        coreRecursionCompute(nums, new boolean[nums.length], new ArrayList<>());
+    private static List<List<Integer>> permutation(int[] nums){
+        List<List<Integer>> result = new ArrayList<>();
+        coreRecursionCompute(nums, new boolean[nums.length], new ArrayList<>(), result);
+        return result;
     }
 
     /**
      * 核心递归计算
+     * @param nums
+     * @param uses
+     * @param path
+     * @param result
      */
-    private static void coreRecursionCompute(int[] nums,boolean[] uses,List<Integer> path){
+    private static void coreRecursionCompute(int[] nums,boolean[] uses,List<Integer> path, List<List<Integer>> result){
         //如果path和nums元素数量相同，代表成功计算出一个结果
         if(path.size() >= nums.length){
-            RES.add(new ArrayList<>(path));
+            result.add(new ArrayList<>(path));
             return;
         }
         for(int i = 0; i < nums.length; i++){
@@ -56,7 +57,7 @@ public class FindTheFullArray {
             path.add(nums[i]);
 
             //递归运算
-            coreRecursionCompute(nums, uses, path);
+            coreRecursionCompute(nums, uses, path, result);
 
             //将该点位移出
             uses[i] = false;
