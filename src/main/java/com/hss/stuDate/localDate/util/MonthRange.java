@@ -34,13 +34,7 @@ public class MonthRange {
             LocalDate monthStart = currentDate;
             LocalDate monthEnd = currentDate.plusDays(YearMonth.from(currentDate).lengthOfMonth());
 
-            //区间结束时间晚于比赛时间
-            if(monthEnd.isAfter(endDate)){
-                monthEnd = endDate;
-            }
-
-            //区间时间大于等于15
-            if(ChronoUnit.DAYS.between(monthStart,monthEnd) >= 15){
+            if(!monthEnd.isAfter(endDate)){
                 System.out.println("周开始: " + monthStart + ", 周结束: " + monthEnd);
             }
 
